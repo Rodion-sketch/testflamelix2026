@@ -1,65 +1,70 @@
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
+
   return (
-    <section id="contact" className="section-padding bg-background">
-      <div className="container-narrow">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section id="contact" className="section-padding relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-t from-secondary/30 to-background" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-3xl" />
+      
+      <div className="container-narrow relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - CTA */}
           <div>
-            <p className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-4">
-              Контакты
+            <p className="text-sm font-medium tracking-widest uppercase text-primary mb-4">
+              {t("contact.subtitle")}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Готовы обсудить ваш проект?
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+              {t("contact.title")}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Свяжитесь с нами, чтобы обсудить, как мы можем помочь вашему бизнесу достичь новых высот в продажах недвижимости.
+              {t("contact.description")}
             </p>
-            <Button size="xl">
-              Оставить заявку
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="text-lg px-8 py-6 glow-primary group">
+              {t("contact.cta")}
+              <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Button>
           </div>
 
           {/* Right side - Contact info */}
-          <div className="flex flex-col justify-center">
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-md bg-secondary flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5 text-foreground" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground mb-1">Email</p>
-                  <a href="mailto:hello@flamelix.com" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-                    hello@flamelix.com
-                  </a>
-                </div>
+          <div className="space-y-6">
+            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-primary/30 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shrink-0">
+                <Mail className="h-5 w-5 text-primary" />
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-md bg-secondary flex items-center justify-center shrink-0">
-                  <Phone className="h-5 w-5 text-foreground" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground mb-1">Телефон</p>
-                  <a href="tel:+74951234567" className="text-lg font-medium text-foreground hover:text-accent transition-colors">
-                    +7 (495) 123-45-67
-                  </a>
-                </div>
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-1">{t("contact.email")}</p>
+                <a href="mailto:hello@flamelix.com" className="text-lg font-medium text-foreground hover:text-primary transition-colors">
+                  hello@flamelix.com
+                </a>
               </div>
+            </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-md bg-secondary flex items-center justify-center shrink-0">
-                  <MapPin className="h-5 w-5 text-foreground" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground mb-1">Офис</p>
-                  <p className="text-lg font-medium text-foreground">
-                    Москва, Россия
-                  </p>
-                </div>
+            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-primary/30 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center shrink-0">
+                <Phone className="h-5 w-5 text-accent" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-1">{t("contact.phone")}</p>
+                <a href="tel:+74951234567" className="text-lg font-medium text-foreground hover:text-primary transition-colors">
+                  +7 (495) 123-45-67
+                </a>
+              </div>
+            </div>
+
+            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-primary/30 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 flex items-center justify-center shrink-0">
+                <MapPin className="h-5 w-5 text-emerald-400" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-1">{t("contact.office")}</p>
+                <p className="text-lg font-medium text-foreground">
+                  {t("contact.location")}
+                </p>
               </div>
             </div>
           </div>
