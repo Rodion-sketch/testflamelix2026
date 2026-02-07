@@ -1,72 +1,85 @@
-const team = [
-  {
-    name: "Родион Ангаев",
-    role: "Growth-стратегии",
-    description: "Маркетинг на основе данных, партнёрский маркетинг. Выстраивает маркетинговую систему и управляет KPI по привлечению лидов.",
-    initials: "РА",
-  },
-  {
-    name: "Илья Волгин",
-    role: "Customer Experience",
-    description: "Сайты-маркетплейсы, мобильные приложения, онлайн-продажи недвижимости. Руководитель департамента цифровизации MR Group.",
-    initials: "ИВ",
-  },
-  {
-    name: "Александр Воробьёв",
-    role: "Брендинг и дизайн",
-    description: "Более 30 проектов в недвижимости. Создаёт продающие материалы: сайты, презентации и рекламные креативы.",
-    initials: "АВ",
-  },
-  {
-    name: "Андрей Соколов",
-    role: "Аналитика",
-    description: "Системная и сквозная аналитика, автоматизация маркетинга и продаж. Выстраивает отчётность от вложений до закрытых сделок.",
-    initials: "АС",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TeamSection = () => {
+  const { t } = useLanguage();
+
+  const team = [
+    {
+      name: t("team.member1.name"),
+      role: t("team.member1.role"),
+      description: t("team.member1.desc"),
+      initials: "РА",
+      gradient: "from-primary to-cyan-400",
+    },
+    {
+      name: t("team.member2.name"),
+      role: t("team.member2.role"),
+      description: t("team.member2.desc"),
+      initials: "ИВ",
+      gradient: "from-accent to-pink-400",
+    },
+    {
+      name: t("team.member3.name"),
+      role: t("team.member3.role"),
+      description: t("team.member3.desc"),
+      initials: "АВ",
+      gradient: "from-emerald-400 to-cyan-400",
+    },
+    {
+      name: t("team.member4.name"),
+      role: t("team.member4.role"),
+      description: t("team.member4.desc"),
+      initials: "АС",
+      gradient: "from-orange-400 to-amber-400",
+    },
+  ];
+
   return (
-    <section id="team" className="section-padding bg-background">
-      <div className="container-narrow">
+    <section id="team" className="section-padding relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      
+      <div className="container-narrow relative z-10">
         {/* Section header */}
-        <div className="mb-16">
-          <p className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-4">
-            Команда
+        <div className="text-center mb-16">
+          <p className="text-sm font-medium tracking-widest uppercase text-primary mb-4">
+            {t("team.subtitle")}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Эксперты с опытом
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+            {t("team.title")}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            Команда профессионалов с многолетним опытом работы с ведущими девелоперами России и международных рынков.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t("team.description")}
           </p>
         </div>
 
         {/* Team grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {team.map((member, index) => (
             <div
               key={member.name}
-              className="flex gap-6 p-6 rounded-lg border border-border hover:border-primary/20 transition-colors group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="glass-card p-6 rounded-xl group hover:border-primary/30 transition-all duration-300"
             >
-              {/* Avatar placeholder */}
-              <div className="shrink-0 w-20 h-20 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground text-xl font-bold">
-                  {member.initials}
-                </span>
-              </div>
-              
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-sm font-medium text-accent mb-3">
-                  {member.role}
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  {member.description}
-                </p>
+              <div className="flex gap-5">
+                {/* Avatar */}
+                <div className={`shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br ${member.gradient} flex items-center justify-center shadow-lg`}>
+                  <span className="text-white text-lg font-bold">
+                    {member.initials}
+                  </span>
+                </div>
+                
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl font-display font-bold text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm font-medium text-primary mb-3">
+                    {member.role}
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {member.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

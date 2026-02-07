@@ -1,37 +1,42 @@
+import { useLanguage } from "@/contexts/LanguageContext";
 import Logo from "@/assets/flamelix-logo.svg";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary py-12 px-6 md:px-12 lg:px-24">
+    <footer className="py-12 px-6 md:px-12 lg:px-24 border-t border-border/50">
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img src={Logo} alt="Flamelix" className="h-8 w-auto brightness-0 invert" />
-            <span className="text-lg font-semibold text-hero">Flamelix</span>
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="relative">
+              <img src={Logo} alt="Flamelix" className="h-8 w-auto relative z-10" />
+              <div className="absolute inset-0 blur-lg bg-primary/20 group-hover:bg-primary/40 transition-colors" />
+            </div>
+            <span className="text-lg font-display font-bold text-foreground">Flamelix</span>
           </a>
 
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            <a href="#services" className="text-sm text-hero-muted hover:text-hero transition-colors">
-              Услуги
+            <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              {t("nav.services")}
             </a>
-            <a href="#team" className="text-sm text-hero-muted hover:text-hero transition-colors">
-              Команда
+            <a href="#team" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              {t("nav.team")}
             </a>
-            <a href="#projects" className="text-sm text-hero-muted hover:text-hero transition-colors">
-              Проекты
+            <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              {t("nav.projects")}
             </a>
-            <a href="#contact" className="text-sm text-hero-muted hover:text-hero transition-colors">
-              Контакты
+            <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              {t("nav.contact")}
             </a>
           </nav>
 
           {/* Copyright */}
-          <p className="text-sm text-hero-muted">
-            © {currentYear} Flamelix
+          <p className="text-sm text-muted-foreground">
+            © {currentYear} Flamelix. {t("footer.rights")}
           </p>
         </div>
       </div>

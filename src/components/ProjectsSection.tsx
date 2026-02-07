@@ -1,81 +1,102 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+import { ExternalLink } from "lucide-react";
+
 const projects = [
   {
     client: "MR Group",
     period: "2023-2025",
-    description: "Управление проектами Customer Experience, изменения для роста конверсий. Трансформация IT инфраструктуры: CRM, электронный документооборот, онлайн-покупка квартир.",
+    descRu: "Customer Experience, трансформация IT: CRM, онлайн-покупка квартир, маркетплейс.",
+    descEn: "Customer Experience, IT transformation: CRM, online apartment purchases, marketplace.",
   },
   {
     client: "ENKA Flexity",
     period: "2023-2025",
-    description: "Для международного девелопера Enka прошли путь от создания бренда гибких сервисных офисов до реализации 3500 рабочих мест.",
+    descRu: "Создание бренда и реализация 3500 рабочих мест для международного девелопера.",
+    descEn: "Brand creation and delivery of 3,500 workspaces for international developer.",
   },
   {
-    client: "Яндекс",
+    client: "Yandex",
     period: "2025",
-    description: "Исследование аудитории и коммуникационная стратегия для соцсетей нового направления Яндекса.",
+    descRu: "Исследование аудитории и коммуникационная стратегия для нового направления.",
+    descEn: "Audience research and communication strategy for new division.",
   },
   {
-    client: "Urban Escape, Бали",
+    client: "Urban Escape",
     period: "2025",
-    description: "Реализация комплекса вилл на Бали за 6 месяцев — полный цикл от стратегии до продаж.",
+    descRu: "Реализация комплекса вилл на Бали за 6 месяцев — полный цикл.",
+    descEn: "Villa complex sales in Bali in 6 months — full cycle.",
   },
   {
     client: "Knight Frank",
     period: "2018-2019",
-    description: "Удвоили продажи жилой, коммерческой и международной недвижимости за год. Построили прибыльный digital-маркетинг.",
+    descRu: "Удвоение продаж недвижимости за год. Построение digital-маркетинга.",
+    descEn: "Doubled real estate sales in one year. Built digital marketing.",
   },
   {
     client: "Tranio",
     period: "2024",
-    description: "Построили отдел маркетинга и управляли лидогенерацией в 5 странах.",
+    descRu: "Построение отдела маркетинга и управление лидогенерацией в 5 странах.",
+    descEn: "Built marketing department and managed lead generation in 5 countries.",
   },
 ];
 
 const ProjectsSection = () => {
+  const { t, language } = useLanguage();
+
   return (
-    <section id="projects" className="section-padding bg-primary">
-      <div className="container-narrow">
+    <section id="projects" className="section-padding relative overflow-hidden">
+      {/* Background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 via-background to-background" />
+      <div className="absolute inset-0 grid-bg opacity-20" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+
+      <div className="container-narrow relative z-10">
         {/* Section header */}
-        <div className="mb-16">
-          <p className="text-sm font-medium tracking-widest uppercase text-hero-muted mb-4">
-            Проекты
+        <div className="text-center mb-16">
+          <p className="text-sm font-medium tracking-widest uppercase text-primary mb-4">
+            {t("projects.subtitle")}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-hero mb-6">
-            Наш опыт
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+            {t("projects.title")}
           </h2>
-          <p className="text-lg text-hero-muted max-w-2xl">
-            Более 30 успешных проектов с ведущими девелоперами России и международными компаниями.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {t("projects.description")}
           </p>
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, index) => (
             <div
               key={project.client}
-              className="bg-white/5 backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:bg-white/10 transition-colors"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="glass-card p-6 rounded-xl group hover:border-primary/30 transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-semibold text-hero">
-                  {project.client}
-                </h3>
-                <span className="text-sm text-hero-muted shrink-0 ml-4">
-                  {project.period}
-                </span>
+                <div>
+                  <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors">
+                    {project.client}
+                  </h3>
+                  <span className="text-xs text-primary font-medium">
+                    {project.period}
+                  </span>
+                </div>
+                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100" />
               </div>
-              <p className="text-hero-muted leading-relaxed">
-                {project.description}
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {language === "ru" ? project.descRu : project.descEn}
               </p>
             </div>
           ))}
         </div>
 
         {/* Bottom stat */}
-        <div className="mt-16 pt-12 border-t border-white/10 text-center">
-          <p className="text-hero-muted text-lg">
-            И ещё более <span className="text-hero font-bold">30 проектов</span> в сфере недвижимости
-          </p>
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-3 glass-card px-6 py-3 rounded-full">
+            <span className="text-muted-foreground">
+              {t("projects.more")}
+            </span>
+          </div>
         </div>
       </div>
     </section>
