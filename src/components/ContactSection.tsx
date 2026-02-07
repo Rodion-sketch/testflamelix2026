@@ -32,8 +32,8 @@ const ContactSection = () => {
 
           {/* Right side - Contact info */}
           <div className="space-y-6">
-            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-primary/30 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center shrink-0">
+            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-border transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-secondary border border-border flex items-center justify-center shrink-0">
                 <Mail className="h-5 w-5 text-primary" />
               </div>
               <div>
@@ -44,9 +44,9 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-primary/30 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center shrink-0">
-                <Phone className="h-5 w-5 text-accent" />
+            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-border transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-secondary border border-border flex items-center justify-center shrink-0">
+                <Phone className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <p className="text-sm font-medium text-muted-foreground mb-1">{t("contact.phone")}</p>
@@ -56,9 +56,9 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-primary/30 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 flex items-center justify-center shrink-0">
-                <MapPin className="h-5 w-5 text-emerald-400" />
+            <div className="glass-card p-6 rounded-xl flex items-start gap-5 group hover:border-border transition-colors">
+              <div className="w-12 h-12 rounded-lg bg-secondary border border-border flex items-center justify-center shrink-0">
+                <MapPin className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <p className="text-sm font-medium text-muted-foreground mb-1">{t("contact.office")}</p>
