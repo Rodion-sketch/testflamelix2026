@@ -9,28 +9,24 @@ const TeamSection = () => {
       role: t("team.member1.role"),
       description: t("team.member1.desc"),
       initials: "РА",
-      gradient: "from-primary to-cyan-400",
     },
     {
       name: t("team.member2.name"),
       role: t("team.member2.role"),
       description: t("team.member2.desc"),
       initials: "ИВ",
-      gradient: "from-accent to-pink-400",
     },
     {
       name: t("team.member3.name"),
       role: t("team.member3.role"),
       description: t("team.member3.desc"),
       initials: "АВ",
-      gradient: "from-emerald-400 to-cyan-400",
     },
     {
       name: t("team.member4.name"),
       role: t("team.member4.role"),
       description: t("team.member4.desc"),
       initials: "АС",
-      gradient: "from-orange-400 to-amber-400",
     },
   ];
 
@@ -63,8 +59,8 @@ const TeamSection = () => {
             >
               <div className="flex gap-5">
                 {/* Avatar */}
-                <div className={`shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br ${member.gradient} flex items-center justify-center shadow-lg`}>
-                  <span className="text-white text-lg font-bold">
+                <div className="shrink-0 w-14 h-14 rounded-lg bg-secondary border border-border flex items-center justify-center">
+                  <span className="text-primary text-sm font-semibold">
                     {member.initials}
                   </span>
                 </div>
