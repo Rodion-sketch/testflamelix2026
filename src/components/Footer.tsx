@@ -10,12 +10,8 @@ const Footer = () => {
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="relative">
-              <img src={Logo} alt="Flamelix" className="h-8 w-auto relative z-10" />
-              <div className="absolute inset-0 blur-lg bg-primary/20 group-hover:bg-primary/40 transition-colors" />
-            </div>
-            <span className="text-lg font-display font-bold text-foreground">Flamelix</span>
+          <a href="#" className="flex items-center group">
+            <img src={Logo} alt="Flamelix" className="h-6 w-auto" />
           </a>
 
           {/* Links */}
