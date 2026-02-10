@@ -16,12 +16,12 @@ const ServicesSection = () => {
   return (
     <section id="services" className="section-padding">
       <div className="container-narrow">
-        {/* Section header */}
-        <div className="max-w-2xl mb-16">
-          <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4">
+        {/* Section header — centered, editorial */}
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <p className="text-xs tracking-[0.3em] uppercase text-primary mb-5">
             {t("services.subtitle")}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display text-foreground mb-6">
             {t("services.title")}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -30,15 +30,13 @@ const ServicesSection = () => {
         </div>
 
         {/* Services grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-2xl overflow-hidden">
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-card/60 border border-border/60 p-8 rounded-2xl group hover:bg-card hover:border-primary/20 hover:shadow-sm transition-all duration-300"
+              className="bg-background p-10 group hover:bg-card transition-colors duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
-                <service.icon className="h-5 w-5 text-primary" />
-              </div>
+              <service.icon className="h-5 w-5 text-primary mb-6" strokeWidth={1.5} />
               <h3 className="text-lg font-display text-foreground mb-3">
                 {service.title}
               </h3>
