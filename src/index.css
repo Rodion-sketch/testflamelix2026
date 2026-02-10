@@ -129,3 +129,23 @@
   animation: fade-in-up 0.7s ease-out forwards;
   opacity: 0;
 }
+
+/* Marquee */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  flex: 1;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: marqueeScroll 25s linear infinite;
+  width: max-content;
+}

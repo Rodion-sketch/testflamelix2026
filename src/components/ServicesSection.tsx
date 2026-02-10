@@ -1,4 +1,4 @@
-import { Search, Users, Target, BarChart3, Palette, Handshake } from "lucide-react";
+import { Search, Users, Target, BarChart3, Palette, Handshake, Compass } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ServicesSection = () => {
@@ -8,15 +8,14 @@ const ServicesSection = () => {
     { icon: Search, title: t("services.research.title"), description: t("services.research.desc") },
     { icon: Users, title: t("services.cx.title"), description: t("services.cx.desc") },
     { icon: Target, title: t("services.leads.title"), description: t("services.leads.desc") },
+    { icon: Compass, title: t("services.strategy.title"), description: t("services.strategy.desc") },
     { icon: Palette, title: t("services.materials.title"), description: t("services.materials.desc") },
     { icon: BarChart3, title: t("services.analytics.title"), description: t("services.analytics.desc") },
-    { icon: Handshake, title: t("services.partners.title"), description: t("services.partners.desc") },
   ];
 
   return (
     <section id="services" className="section-padding">
       <div className="container-narrow">
-        {/* Section header — centered, editorial */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <p className="text-xs tracking-[0.3em] uppercase text-primary mb-5">
             {t("services.subtitle")}
@@ -29,8 +28,8 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-2xl overflow-hidden">
+        {/* 3x2 grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/60 border border-border/60 rounded-2xl overflow-hidden mb-4">
           {services.map((service) => (
             <div
               key={service.title}
@@ -45,6 +44,21 @@ const ServicesSection = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Accent full-width card for Partner Marketing */}
+        <div className="border border-primary/20 rounded-2xl p-10 bg-primary/5 hover:bg-primary/10 transition-colors">
+          <div className="flex items-start gap-6">
+            <Handshake className="h-6 w-6 text-primary shrink-0 mt-1" strokeWidth={1.5} />
+            <div>
+              <h3 className="text-xl font-display text-foreground mb-2">
+                {t("services.partners.title")}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
+                {t("services.partners.desc")}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
