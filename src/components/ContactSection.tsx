@@ -5,15 +5,15 @@ const ContactSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="section-padding border-t border-border">
+    <section id="contact" className="section-padding bg-card/50">
       <div className="container-narrow">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left side */}
           <div>
-            <p className="text-sm tracking-widest uppercase text-primary font-medium mb-4">
+            <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4">
               {t("contact.subtitle")}
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-6">
               {t("contact.title")}
             </h2>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
@@ -21,7 +21,7 @@ const ContactSection = () => {
             </p>
             <a
               href="mailto:hello@flamelix.com"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-opacity group rounded-md"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-opacity group rounded-full"
             >
               {t("contact.cta")}
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -29,9 +29,9 @@ const ContactSection = () => {
           </div>
 
           {/* Right side — Contact info */}
-          <div className="flex flex-col justify-center space-y-8">
-            <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-card transition-colors">
-              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+          <div className="flex flex-col justify-center space-y-6">
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-background border border-border/60 hover:border-primary/20 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <Mail className="h-5 w-5 text-primary" />
               </div>
               <div>
@@ -42,8 +42,8 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-card transition-colors">
-              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-background border border-border/60 hover:border-primary/20 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <Phone className="h-5 w-5 text-primary" />
               </div>
               <div>
@@ -54,8 +54,8 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-card transition-colors">
-              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+            <div className="flex items-start gap-4 p-5 rounded-2xl bg-background border border-border/60 hover:border-primary/20 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <MapPin className="h-5 w-5 text-primary" />
               </div>
               <div>

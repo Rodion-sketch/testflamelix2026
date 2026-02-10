@@ -16,21 +16,21 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container-narrow section-padding !py-5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+      <div className="container-narrow section-padding !py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto invert" />
+            <img src={Logo} alt="Flamelix" className="h-7 md:h-9 w-auto invert" />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="text-[13px] text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </a>
@@ -38,11 +38,11 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA + Language */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-5">
             <LanguageSwitcher />
             <a
               href="#contact"
-              className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
+              className="text-[13px] font-medium bg-primary text-primary-foreground px-5 py-2 rounded-full hover:opacity-90 transition-opacity"
             >
               {t("nav.cta")}
             </a>
@@ -67,13 +67,13 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden pt-8 pb-6 border-t border-border mt-5">
-            <div className="flex flex-col gap-5">
+          <nav className="md:hidden pt-6 pb-6 border-t border-border/50 mt-4">
+            <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-base text-muted-foreground hover:text-primary transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -82,7 +82,7 @@ const Header = () => {
               <a
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-base font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-md self-start mt-2 text-center"
+                className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-full self-start mt-2 text-center"
               >
                 {t("nav.cta")}
               </a>
