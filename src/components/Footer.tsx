@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import Logo from "@/assets/flamelix-logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -8,8 +9,8 @@ const Footer = () => {
     <footer className="py-12 px-6 md:px-12 lg:px-24 border-t border-border">
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="#" className="text-lg font-display font-bold text-foreground">
-            Flamelix
+          <a href="#" className="flex items-center">
+            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto" />
           </a>
 
           <nav className="flex flex-wrap items-center justify-center gap-8">
