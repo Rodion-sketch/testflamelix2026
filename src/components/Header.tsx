@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container-narrow section-padding !py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center group">
+          <a href="#" className="flex items-center group mr-8">
             <img src={Logo} alt="Flamelix" className="h-7 w-auto" />
           </a>
 
