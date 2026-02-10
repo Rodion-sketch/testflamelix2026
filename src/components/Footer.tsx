@@ -1,5 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import Logo from "@/assets/flamelix-logo.svg";
+import Logo from "@/assets/flamelix-logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
