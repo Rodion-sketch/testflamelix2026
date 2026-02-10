@@ -1,38 +1,38 @@
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/hero-abstract.jpg";
+import heroImage from "@/assets/hero-warm.jpg";
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background image */}
+      {/* Warm gradient background with image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt=""
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/80 to-transparent" />
       </div>
 
       <div className="container-narrow section-padding pt-32 lg:pt-40 relative z-10">
-        <div className="max-w-4xl">
+        <div className="max-w-3xl">
           {/* Subtitle */}
-          <p className="text-sm tracking-widest uppercase text-primary font-medium mb-8 animate-fade-in-up">
+          <p className="text-sm tracking-[0.2em] uppercase text-primary mb-8 animate-fade-in-up">
             {t("hero.subtitle")}
           </p>
 
-          {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+          {/* Main heading — serif, elegant */}
+          <h1 className="text-4xl md:text-6xl lg:text-[4.5rem] font-display leading-[1.15] mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             {t("hero.title")}
             <br />
-            <span className="text-primary">{t("hero.titleAccent")}</span>
+            <em className="text-primary">{t("hero.titleAccent")}</em>
           </h1>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 max-w-xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             {t("hero.description")}
           </p>
 
@@ -40,32 +40,32 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-opacity group rounded-md"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-all rounded-full group"
             >
               {t("hero.cta1")}
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 border border-border px-8 py-4 text-sm font-medium text-foreground hover:bg-secondary transition-colors rounded-md"
+              className="inline-flex items-center gap-2 border border-foreground/20 px-8 py-4 text-sm font-medium text-foreground hover:border-foreground/40 hover:bg-card transition-all rounded-full"
             >
               {t("hero.cta2")}
             </a>
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-12 md:gap-16 mt-24 pt-12 border-t border-border animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-wrap gap-12 md:gap-16 mt-28 pt-10 border-t border-border/60 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div>
-              <p className="text-3xl md:text-4xl font-display font-bold text-primary">{t("hero.stat1.value")}</p>
-              <p className="text-muted-foreground text-sm mt-1">{t("hero.stat1.label")}</p>
+              <p className="text-3xl md:text-4xl font-display text-foreground">{t("hero.stat1.value")}</p>
+              <p className="text-muted-foreground text-sm mt-2">{t("hero.stat1.label")}</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-display font-bold text-primary">{t("hero.stat2.value")}</p>
-              <p className="text-muted-foreground text-sm mt-1">{t("hero.stat2.label")}</p>
+              <p className="text-3xl md:text-4xl font-display text-foreground">{t("hero.stat2.value")}</p>
+              <p className="text-muted-foreground text-sm mt-2">{t("hero.stat2.label")}</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-display font-bold text-primary">{t("hero.stat3.value")}</p>
-              <p className="text-muted-foreground text-sm mt-1">{t("hero.stat3.label")}</p>
+              <p className="text-3xl md:text-4xl font-display text-foreground">{t("hero.stat3.value")}</p>
+              <p className="text-muted-foreground text-sm mt-2">{t("hero.stat3.label")}</p>
             </div>
           </div>
         </div>

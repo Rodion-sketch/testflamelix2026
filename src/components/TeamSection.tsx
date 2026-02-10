@@ -11,39 +11,39 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="section-padding border-t border-border bg-card">
+    <section id="team" className="section-padding bg-card/50">
       <div className="container-narrow">
         {/* Section header */}
-        <div className="mb-16">
-          <p className="text-sm tracking-widest uppercase text-primary font-medium mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4">
             {t("team.subtitle")}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-6">
             {t("team.title")}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             {t("team.description")}
           </p>
         </div>
 
         {/* Team grid */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-5">
           {team.map((member) => (
             <div
               key={member.name}
-              className="bg-background border border-border p-8 rounded-lg group hover:border-primary/30 transition-all duration-300"
+              className="bg-background border border-border/60 p-8 rounded-2xl group hover:border-primary/20 hover:shadow-sm transition-all duration-300"
             >
               <div className="flex gap-5">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary text-sm font-bold">
+                  <span className="text-primary text-sm font-semibold">
                     {member.initials}
                   </span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-display font-bold text-foreground mb-1">
+                  <h3 className="text-lg font-display text-foreground mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-sm text-primary font-medium mb-3">
+                  <p className="text-sm text-primary mb-3">
                     {member.role}
                   </p>
                   <p className="text-muted-foreground leading-relaxed text-sm">

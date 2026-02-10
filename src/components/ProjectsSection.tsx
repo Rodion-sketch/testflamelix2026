@@ -14,46 +14,42 @@ const ProjectsSection = () => {
   const { t, language } = useLanguage();
 
   return (
-    <section id="projects" className="section-padding border-t border-border">
+    <section id="projects" className="section-padding">
       <div className="container-narrow">
         {/* Section header */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          <div>
-            <p className="text-sm tracking-widest uppercase text-primary font-medium mb-4">
-              {t("projects.subtitle")}
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
-              {t("projects.title")}
-            </h2>
-          </div>
-          <div className="flex items-end">
-            <p className="text-lg text-muted-foreground max-w-md">
-              {t("projects.description")}
-            </p>
-          </div>
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4">
+            {t("projects.subtitle")}
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-6">
+            {t("projects.title")}
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {t("projects.description")}
+          </p>
         </div>
 
         {/* Projects list */}
-        <div className="border-t border-border">
+        <div>
           {projects.map((project) => (
             <div
               key={project.client}
-              className="grid grid-cols-12 gap-4 py-8 border-b border-border group hover:bg-card transition-colors px-4 -mx-4 rounded-lg cursor-pointer"
+              className="grid grid-cols-12 gap-4 py-7 border-b border-border/60 group hover:bg-card/50 transition-colors px-5 -mx-5 rounded-xl cursor-pointer"
             >
               <div className="col-span-4 md:col-span-3">
-                <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-display text-foreground group-hover:text-primary transition-colors">
                   {project.client}
                 </h3>
               </div>
-              <div className="col-span-2 md:col-span-2">
+              <div className="col-span-2 md:col-span-2 flex items-center">
                 <span className="text-sm text-muted-foreground">{project.period}</span>
               </div>
-              <div className="col-span-5 md:col-span-6">
+              <div className="col-span-5 md:col-span-6 flex items-center">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {language === "ru" ? project.descRu : project.descEn}
                 </p>
               </div>
-              <div className="col-span-1 flex items-start justify-end">
+              <div className="col-span-1 flex items-center justify-end">
                 <ArrowUpRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </div>
@@ -62,7 +58,7 @@ const ProjectsSection = () => {
 
         {/* Bottom note */}
         <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground italic">
             {t("projects.more")}
           </p>
         </div>
