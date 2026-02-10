@@ -1,78 +1,64 @@
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-hero-gradient" />
-      
-      {/* Grid pattern */}
-      <div className="absolute inset-0 grid-bg opacity-30" />
-      
-      {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+    <section className="min-h-screen flex items-center">
+      <div className="container-narrow section-padding pt-32 lg:pt-40">
+        <div className="max-w-4xl">
+          {/* Subtitle */}
+          <p className="text-sm tracking-widest uppercase text-muted-foreground mb-8 animate-fade-in-up">
+            {t("hero.subtitle")}
+          </p>
 
-      <div className="container-narrow section-padding pt-32 lg:pt-40 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-8 animate-fade-in-up">
-            <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">{t("hero.subtitle")}</span>
-          </div>
-          
           {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-tight mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <span className="text-foreground">{t("hero.title")}</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            {t("hero.title")}
             <br />
-            <span className="gradient-text glow-text">{t("hero.titleAccent")}</span>
+            {t("hero.titleAccent")}
           </h1>
-          
+
           {/* Description */}
-          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed mb-12 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             {t("hero.description")}
           </p>
-          
+
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a href="#contact">
-              <Button size="lg" className="text-lg px-8 py-6 glow-primary group">
-                {t("hero.cta1")}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 text-sm font-medium hover:bg-muted-foreground transition-colors group"
+            >
+              {t("hero.cta1")}
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#projects">
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-border hover:border-primary/50 hover:bg-primary/5">
-                {t("hero.cta2")}
-              </Button>
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 border border-border px-8 py-4 text-sm font-medium text-foreground hover:bg-secondary transition-colors"
+            >
+              {t("hero.cta2")}
             </a>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-24 pt-12 border-t border-border/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl lg:text-5xl font-display font-bold gradient-text">{t("hero.stat1.value")}</p>
-              <p className="text-muted-foreground text-sm md:text-base mt-2">{t("hero.stat1.label")}</p>
+          <div className="flex gap-16 mt-24 pt-12 border-t border-border animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div>
+              <p className="text-3xl md:text-4xl font-display font-bold text-foreground">{t("hero.stat1.value")}</p>
+              <p className="text-muted-foreground text-sm mt-1">{t("hero.stat1.label")}</p>
             </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl lg:text-5xl font-display font-bold gradient-text">{t("hero.stat2.value")}</p>
-              <p className="text-muted-foreground text-sm md:text-base mt-2">{t("hero.stat2.label")}</p>
+            <div>
+              <p className="text-3xl md:text-4xl font-display font-bold text-foreground">{t("hero.stat2.value")}</p>
+              <p className="text-muted-foreground text-sm mt-1">{t("hero.stat2.label")}</p>
             </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl lg:text-5xl font-display font-bold gradient-text">{t("hero.stat3.value")}</p>
-              <p className="text-muted-foreground text-sm md:text-base mt-2">{t("hero.stat3.label")}</p>
+            <div>
+              <p className="text-3xl md:text-4xl font-display font-bold text-foreground">{t("hero.stat3.value")}</p>
+              <p className="text-muted-foreground text-sm mt-1">{t("hero.stat3.label")}</p>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

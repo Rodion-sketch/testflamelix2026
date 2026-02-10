@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Logo from "@/assets/flamelix-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,39 +15,43 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/50">
-      <div className="container-narrow section-padding !py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <div className="container-narrow section-padding !py-5">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center group mr-8">
-            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto" />
+          {/* Logo text */}
+          <a href="#" className="text-xl font-display font-bold text-foreground tracking-tight">
+            Flamelix
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
 
           {/* Desktop CTA + Language */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-6">
             <LanguageSwitcher />
-            <a href="#contact"><Button className="glow-primary">{t("nav.cta")}</Button></a>
+            <a
+              href="#contact"
+              className="text-sm font-medium text-foreground border-b border-foreground pb-0.5 hover:text-muted-foreground hover:border-muted-foreground transition-colors"
+            >
+              {t("nav.cta")}
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-3">
             <LanguageSwitcher />
             <button
-              className="p-2 glass-card rounded-lg"
+              className="p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -64,22 +66,24 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden pt-6 pb-4 border-t border-border/50 mt-4">
-            <div className="flex flex-col gap-4">
+          <nav className="md:hidden pt-8 pb-6 border-t border-border mt-5">
+            <div className="flex flex-col gap-5">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-base font-medium text-muted-foreground hover:text-primary transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                <Button className="mt-4 glow-primary">
-                  {t("nav.cta")}
-                </Button>
+              <a
+                href="#contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-base font-medium text-foreground border-b border-foreground pb-0.5 self-start mt-2"
+              >
+                {t("nav.cta")}
               </a>
             </div>
           </nav>
