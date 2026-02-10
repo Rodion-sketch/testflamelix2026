@@ -17,11 +17,11 @@ const ProjectsSection = () => {
     <section id="projects" className="section-padding">
       <div className="container-narrow">
         {/* Section header */}
-        <div className="max-w-2xl mb-16">
-          <p className="text-sm tracking-[0.2em] uppercase text-primary mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <p className="text-xs tracking-[0.3em] uppercase text-primary mb-5">
             {t("projects.subtitle")}
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display text-foreground mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display text-foreground mb-6">
             {t("projects.title")}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -29,22 +29,22 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Projects list */}
-        <div>
+        {/* Projects list — editorial style */}
+        <div className="border-t border-border">
           {projects.map((project) => (
             <div
               key={project.client}
-              className="grid grid-cols-12 gap-4 py-7 border-b border-border/60 group hover:bg-card/50 transition-colors px-5 -mx-5 rounded-xl cursor-pointer"
+              className="grid grid-cols-12 gap-4 py-8 border-b border-border group hover:bg-card/60 transition-colors px-6 -mx-6 cursor-pointer"
             >
-              <div className="col-span-4 md:col-span-3">
-                <h3 className="text-lg font-display text-foreground group-hover:text-primary transition-colors">
+              <div className="col-span-12 md:col-span-3">
+                <h3 className="text-xl font-display text-foreground group-hover:text-primary transition-colors">
                   {project.client}
                 </h3>
               </div>
-              <div className="col-span-2 md:col-span-2 flex items-center">
-                <span className="text-sm text-muted-foreground">{project.period}</span>
+              <div className="col-span-4 md:col-span-2 flex items-center">
+                <span className="text-sm text-muted-foreground font-mono">{project.period}</span>
               </div>
-              <div className="col-span-5 md:col-span-6 flex items-center">
+              <div className="col-span-7 md:col-span-6 flex items-center">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {language === "ru" ? project.descRu : project.descEn}
                 </p>
@@ -57,8 +57,8 @@ const ProjectsSection = () => {
         </div>
 
         {/* Bottom note */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground italic">
+        <div className="mt-14 text-center">
+          <p className="text-sm text-muted-foreground italic font-display">
             {t("projects.more")}
           </p>
         </div>
