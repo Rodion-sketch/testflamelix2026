@@ -42,7 +42,7 @@ const Header = () => {
           {/* Desktop CTA + Language */}
           <div className="hidden md:flex items-center gap-4">
             <LanguageSwitcher />
-            <Button className="glow-primary">{t("nav.cta")}</Button>
+            <a href="#contact"><Button className="glow-primary">{t("nav.cta")}</Button></a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,9 +76,11 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="mt-4 glow-primary">
-                {t("nav.cta")}
-              </Button>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                <Button className="mt-4 glow-primary">
+                  {t("nav.cta")}
+                </Button>
+              </a>
             </div>
           </nav>
         )}
