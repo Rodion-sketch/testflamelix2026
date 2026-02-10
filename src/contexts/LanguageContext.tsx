@@ -112,6 +112,16 @@ const translations: Record<Language, Record<string, string>> = {
     "team.member4.role": "Аналитика",
     "team.member4.desc": "Системная аналитика, автоматизация маркетинга и продаж.",
 
+    // Testimonials
+    "testimonials.subtitle": "Отзывы",
+    "testimonials.title": "Что говорят клиенты",
+    "testimonials.1.text1": "Ваш системный подход, аналитическая точность и способность выстраивать работающие стратегии сыграли важную роль в развитии Flexity.",
+    "testimonials.1.text2": "Благодаря вашей экспертизе мы получили современную маркетинговую инфраструктуру, результативные рекламные кампании и оптимизированные процессы внутри отдела маркетинга.",
+    "testimonials.1.text3": "Мы ценим вашу надёжность, самостоятельность и умение вести проекты полного цикла, обеспечивая стабильный и измеримый результат.",
+    "testimonials.1.name": "Сарпер Алтунйува",
+    "testimonials.1.role": "Генеральный директор, Flexity",
+    "testimonials.1.initials": "СА",
+
     // FAQ
     "faq.subtitle": "FAQ",
     "faq.title": "Частые вопросы",
@@ -249,6 +259,16 @@ const translations: Record<Language, Record<string, string>> = {
     "team.member4.name": "Andrey Sokolov",
     "team.member4.role": "Analytics",
     "team.member4.desc": "System analytics, marketing and sales automation.",
+
+    // Testimonials
+    "testimonials.subtitle": "Testimonials",
+    "testimonials.title": "What our clients say",
+    "testimonials.1.text1": "Your systematic approach, analytical precision and ability to build effective strategies played an important role in Flexity's growth.",
+    "testimonials.1.text2": "Thanks to your expertise, we gained a modern marketing infrastructure, high-performing ad campaigns and optimized processes within our marketing department.",
+    "testimonials.1.text3": "We value your reliability, independence and ability to manage full-cycle projects, delivering stable and measurable results.",
+    "testimonials.1.name": "Sarper Altunyuva",
+    "testimonials.1.role": "CEO, Flexity",
+    "testimonials.1.initials": "SA",
 
     // FAQ
     "faq.subtitle": "FAQ",
