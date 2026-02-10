@@ -2,15 +2,43 @@ import { useState } from "react";
 import { Mail, MessageCircle, Send } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+const FORMSPREE_URL = "https://formspree.io/f/xreaepqz";
+
 const ContactSection = () => {
   const { t } = useLanguage();
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    (e.target as HTMLFormElement).reset();
+    setLoading(true);
+    setError(false);
+
+    try {
+      const form = e.target as HTMLFormElement;
+      const data = new FormData(form);
+
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setSent(true);
+        form.reset();
+        setTimeout(() => setSent(false), 3000);
+      } else {
+        setError(true);
+        setTimeout(() => setError(false), 3000);
+      }
+    } catch {
+      setError(true);
+      setTimeout(() => setError(false), 3000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -64,6 +92,7 @@ const ContactSection = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     required
                     maxLength={100}
                     placeholder={t("contact.form.name.ph")}
@@ -80,6 +109,7 @@ const ContactSection = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     maxLength={255}
                     placeholder={t("contact.form.email.ph")}
@@ -96,6 +126,7 @@ const ContactSection = () => {
                   {t("contact.form.project")}
                 </label>
                 <textarea
+                  name="message"
                   required
                   maxLength={1000}
                   rows={5}
@@ -109,14 +140,23 @@ const ContactSection = () => {
               </div>
               <button
                 type="submit"
+                disabled={loading}
                 className={`w-full py-4 rounded-full text-sm font-medium transition-all ${
                   sent
                     ? "bg-green-600 text-white"
-                    : "bg-primary text-primary-foreground hover:opacity-90"
-                }`}
+                    : error
+                      ? "bg-red-600 text-white"
+                      : "bg-primary text-primary-foreground hover:opacity-90"
+                } disabled:opacity-60`}
               >
-                {sent ? t("contact.form.sent") : t("contact.form.submit")}
-              </button>
+                {loading
+                  ? "Отправка..."
+                  : sent
+                    ? t("contact.form.sent")
+                    : error
+                      ? "Ошибка, попробуйте снова"
+                      : t("contact.form.submit")}
+                </button>
             </form>
           </div>
         </div>
