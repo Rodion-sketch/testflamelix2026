@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import Logo from "@/assets/flamelix-logo.png";
+import Logo from "@/assets/flamelix-logo-new.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ const Header = () => {
               src={Logo}
               alt="Flamelix"
               className={`h-7 md:h-9 w-auto transition-all duration-300 ${
-                scrolled ? "invert" : ""
+                scrolled ? "" : "brightness-0 invert"
               }`}
             />
           </a>

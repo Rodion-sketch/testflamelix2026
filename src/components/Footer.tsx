@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { MessageCircle, Send } from "lucide-react";
-import Logo from "@/assets/flamelix-logo.png";
+import Logo from "@/assets/flamelix-logo-new.png";
 
 const Footer = () => {
   const { t } = useLanguage();
