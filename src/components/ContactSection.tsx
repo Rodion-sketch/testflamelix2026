@@ -96,7 +96,7 @@ const ContactSection = () => {
                     required
                     maxLength={100}
                     placeholder={t("contact.form.name.ph")}
-                    className="w-full bg-transparent border rounded-xl px-4 py-3 text-sm outline-none focus:border-primary transition-colors placeholder:opacity-40"
+                    className="w-full bg-transparent border rounded-2xl px-4 py-3 text-sm outline-none focus:border-primary transition-colors placeholder:opacity-40"
                     style={{
                       borderColor: "hsl(var(--dark-border))",
                       color: "hsl(var(--dark-fg))",
@@ -113,7 +113,7 @@ const ContactSection = () => {
                     required
                     maxLength={255}
                     placeholder={t("contact.form.email.ph")}
-                    className="w-full bg-transparent border rounded-xl px-4 py-3 text-sm outline-none focus:border-primary transition-colors placeholder:opacity-40"
+                    className="w-full bg-transparent border rounded-2xl px-4 py-3 text-sm outline-none focus:border-primary transition-colors placeholder:opacity-40"
                     style={{
                       borderColor: "hsl(var(--dark-border))",
                       color: "hsl(var(--dark-fg))",
@@ -131,7 +131,7 @@ const ContactSection = () => {
                   maxLength={1000}
                   rows={5}
                   placeholder={t("contact.form.project.ph")}
-                  className="w-full bg-transparent border rounded-xl px-4 py-3 text-sm outline-none focus:border-primary transition-colors resize-none placeholder:opacity-40"
+                  className="w-full bg-transparent border rounded-2xl px-4 py-3 text-sm outline-none focus:border-primary transition-colors resize-none placeholder:opacity-40"
                   style={{
                     borderColor: "hsl(var(--dark-border))",
                     color: "hsl(var(--dark-fg))",

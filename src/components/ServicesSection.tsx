@@ -35,7 +35,9 @@ const ServicesSection = () => {
               key={service.title}
               className="bg-background p-10 group hover:bg-card transition-colors duration-300"
             >
-              <service.icon className="h-5 w-5 text-primary mb-6" strokeWidth={1.5} />
+              <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
+                <service.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+              </div>
               <h3 className="text-lg font-display text-foreground mb-3">
                 {service.title}
               </h3>
@@ -49,7 +51,9 @@ const ServicesSection = () => {
         {/* Accent full-width card for Partner Marketing */}
         <div className="border border-primary/20 rounded-2xl p-10 bg-primary/5 hover:bg-primary/10 transition-colors">
           <div className="flex items-start gap-6">
-            <Handshake className="h-6 w-6 text-primary shrink-0 mt-1" strokeWidth={1.5} />
+            <div className="w-10 h-10 rounded-2xl bg-primary/15 flex items-center justify-center shrink-0">
+              <Handshake className="h-5 w-5 text-primary" strokeWidth={1.5} />
+            </div>
             <div>
               <h3 className="text-xl font-display text-foreground mb-2">
                 {t("services.partners.title")}
