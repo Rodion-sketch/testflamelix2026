@@ -1,4 +1,3 @@
-import { Plus } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ChallengesSection = () => {
@@ -27,9 +26,13 @@ const ChallengesSection = () => {
           {challenges.map((text, i) => (
             <div
               key={i}
-              className="flex items-start gap-4 p-8 border border-border rounded-2xl bg-card/40 hover:bg-card transition-colors"
+              className="flex items-start gap-5 p-8 border border-border rounded-2xl bg-card/40 hover:bg-card transition-colors"
             >
-              <Plus className="h-5 w-5 text-primary mt-0.5 shrink-0" strokeWidth={1.5} />
+              <div className="w-8 h-8 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                <span className="text-xs font-mono font-semibold text-primary">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
               <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
             </div>
           ))}

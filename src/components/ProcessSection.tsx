@@ -51,7 +51,10 @@ const ProcessSection = () => {
                 </p>
               </div>
               <div className="col-span-2 flex items-center justify-end">
-                <div className="w-12 h-12 rounded-full border flex items-center justify-center group-hover:scale-110 transition-transform" style={{ borderColor: "hsl(var(--dark-border))" }}>
+                <div
+                  className="w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform"
+                  style={{ backgroundColor: "hsl(var(--primary) / 0.1)" }}
+                >
                   <step.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
                 </div>
               </div>
