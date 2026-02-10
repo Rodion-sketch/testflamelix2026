@@ -21,12 +21,8 @@ const Header = () => {
       <div className="container-narrow section-padding !py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="relative">
-              <img src={Logo} alt="Flamelix" className="h-9 w-auto relative z-10" />
-              <div className="absolute inset-0 blur-xl bg-primary/30 group-hover:bg-primary/50 transition-colors" />
-            </div>
-            <span className="text-xl font-display font-bold text-foreground">Flamelix</span>
+          <a href="#" className="flex items-center group">
+            <img src={Logo} alt="Flamelix" className="h-7 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
