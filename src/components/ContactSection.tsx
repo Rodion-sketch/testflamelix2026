@@ -10,7 +10,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left side */}
           <div>
-            <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
+            <p className="text-sm tracking-widest uppercase text-primary font-medium mb-4">
               {t("contact.subtitle")}
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
@@ -21,7 +21,7 @@ const ContactSection = () => {
             </p>
             <a
               href="mailto:hello@flamelix.com"
-              className="inline-flex items-center gap-2 bg-foreground text-background px-8 py-4 text-sm font-medium hover:bg-muted-foreground transition-colors group"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-opacity group rounded-md"
             >
               {t("contact.cta")}
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -30,31 +30,37 @@ const ContactSection = () => {
 
           {/* Right side — Contact info */}
           <div className="flex flex-col justify-center space-y-8">
-            <div className="flex items-start gap-4 group">
-              <Mail className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-card transition-colors">
+              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                <Mail className="h-5 w-5 text-primary" />
+              </div>
               <div>
                 <p className="text-sm text-muted-foreground mb-1">{t("contact.email")}</p>
-                <a href="mailto:hello@flamelix.com" className="text-foreground hover:text-muted-foreground transition-colors">
+                <a href="mailto:hello@flamelix.com" className="text-foreground font-medium hover:text-primary transition-colors">
                   hello@flamelix.com
                 </a>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 group">
-              <Phone className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-card transition-colors">
+              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                <Phone className="h-5 w-5 text-primary" />
+              </div>
               <div>
                 <p className="text-sm text-muted-foreground mb-1">{t("contact.phone")}</p>
-                <a href="tel:+74951234567" className="text-foreground hover:text-muted-foreground transition-colors">
+                <a href="tel:+74951234567" className="text-foreground font-medium hover:text-primary transition-colors">
                   +7 (495) 123-45-67
                 </a>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 group">
-              <MapPin className="h-5 w-5 text-muted-foreground mt-0.5" />
+            <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-card transition-colors">
+              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center shrink-0">
+                <MapPin className="h-5 w-5 text-primary" />
+              </div>
               <div>
                 <p className="text-sm text-muted-foreground mb-1">{t("contact.office")}</p>
-                <p className="text-foreground">{t("contact.location")}</p>
+                <p className="text-foreground font-medium">{t("contact.location")}</p>
               </div>
             </div>
           </div>

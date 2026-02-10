@@ -19,9 +19,9 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container-narrow section-padding !py-5">
         <div className="flex items-center justify-between">
-          {/* Logo text */}
+          {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto" />
+            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto invert" />
           </a>
 
           {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.label}
               </a>
@@ -42,7 +42,7 @@ const Header = () => {
             <LanguageSwitcher />
             <a
               href="#contact"
-              className="text-sm font-medium text-foreground border-b border-foreground pb-0.5 hover:text-muted-foreground hover:border-muted-foreground transition-colors"
+              className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity"
             >
               {t("nav.cta")}
             </a>
@@ -73,7 +73,7 @@ const Header = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base text-muted-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -82,7 +82,7 @@ const Header = () => {
               <a
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-base font-medium text-foreground border-b border-foreground pb-0.5 self-start mt-2"
+                className="text-base font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-md self-start mt-2 text-center"
               >
                 {t("nav.cta")}
               </a>
