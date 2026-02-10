@@ -99,6 +99,10 @@
     font-family: 'Space Grotesk', sans-serif;
     @apply font-bold tracking-tight;
   }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
 }
 
 @layer components {
