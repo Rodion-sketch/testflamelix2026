@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Logo from "@/assets/flamelix-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +20,8 @@ const Header = () => {
       <div className="container-narrow section-padding !py-5">
         <div className="flex items-center justify-between">
           {/* Logo text */}
-          <a href="#" className="text-xl font-display font-bold text-foreground tracking-tight">
-            Flamelix
+          <a href="#" className="flex items-center">
+            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
