@@ -11,11 +11,11 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="section-padding border-t border-border">
+    <section id="team" className="section-padding border-t border-border bg-card">
       <div className="container-narrow">
         {/* Section header */}
         <div className="mb-16">
-          <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
+          <p className="text-sm tracking-widest uppercase text-primary font-medium mb-4">
             {t("team.subtitle")}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-6">
@@ -27,15 +27,15 @@ const TeamSection = () => {
         </div>
 
         {/* Team grid */}
-        <div className="grid md:grid-cols-2 gap-px bg-border">
+        <div className="grid md:grid-cols-2 gap-6">
           {team.map((member) => (
             <div
               key={member.name}
-              className="bg-background p-8 group hover:bg-secondary transition-colors"
+              className="bg-background border border-border p-8 rounded-lg group hover:border-primary/30 transition-all duration-300"
             >
               <div className="flex gap-5">
-                <div className="shrink-0 w-12 h-12 rounded-full bg-secondary border border-border flex items-center justify-center">
-                  <span className="text-foreground text-sm font-medium">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-primary text-sm font-bold">
                     {member.initials}
                   </span>
                 </div>
@@ -43,7 +43,7 @@ const TeamSection = () => {
                   <h3 className="text-lg font-display font-bold text-foreground mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3">
+                  <p className="text-sm text-primary font-medium mb-3">
                     {member.role}
                   </p>
                   <p className="text-muted-foreground leading-relaxed text-sm">

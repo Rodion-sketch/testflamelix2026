@@ -10,20 +10,20 @@ const Footer = () => {
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <a href="#" className="flex items-center">
-            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto" />
+            <img src={Logo} alt="Flamelix" className="h-7 md:h-10 w-auto invert" />
           </a>
 
           <nav className="flex flex-wrap items-center justify-center gap-8">
-            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               {t("nav.services")}
             </a>
-            <a href="#team" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#team" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               {t("nav.team")}
             </a>
-            <a href="#projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               {t("nav.projects")}
             </a>
-            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               {t("nav.contact")}
             </a>
           </nav>

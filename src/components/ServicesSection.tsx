@@ -19,7 +19,7 @@ const ServicesSection = () => {
         {/* Section header */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div>
-            <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
+            <p className="text-sm tracking-widest uppercase text-primary font-medium mb-4">
               {t("services.subtitle")}
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
@@ -34,13 +34,15 @@ const ServicesSection = () => {
         </div>
 
         {/* Services grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-          {services.map((service) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
             <div
               key={service.title}
-              className="bg-background p-8 group hover:bg-secondary transition-colors"
+              className="bg-card border border-border p-8 rounded-lg group hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
             >
-              <service.icon className="h-6 w-6 text-muted-foreground mb-6 group-hover:text-foreground transition-colors" />
+              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="h-5 w-5 text-primary" />
+              </div>
               <h3 className="text-lg font-display font-bold text-foreground mb-3">
                 {service.title}
               </h3>

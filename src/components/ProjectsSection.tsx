@@ -19,7 +19,7 @@ const ProjectsSection = () => {
         {/* Section header */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div>
-            <p className="text-sm tracking-widest uppercase text-muted-foreground mb-4">
+            <p className="text-sm tracking-widest uppercase text-primary font-medium mb-4">
               {t("projects.subtitle")}
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground">
@@ -33,15 +33,15 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Projects list — Subduxion style rows */}
+        {/* Projects list */}
         <div className="border-t border-border">
           {projects.map((project) => (
             <div
               key={project.client}
-              className="grid grid-cols-12 gap-4 py-8 border-b border-border group hover:bg-secondary/50 transition-colors px-4 -mx-4 cursor-pointer"
+              className="grid grid-cols-12 gap-4 py-8 border-b border-border group hover:bg-card transition-colors px-4 -mx-4 rounded-lg cursor-pointer"
             >
               <div className="col-span-4 md:col-span-3">
-                <h3 className="text-lg font-display font-bold text-foreground group-hover:text-muted-foreground transition-colors">
+                <h3 className="text-lg font-display font-bold text-foreground group-hover:text-primary transition-colors">
                   {project.client}
                 </h3>
               </div>
@@ -54,7 +54,7 @@ const ProjectsSection = () => {
                 </p>
               </div>
               <div className="col-span-1 flex items-start justify-end">
-                <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ArrowUpRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </div>
           ))}
