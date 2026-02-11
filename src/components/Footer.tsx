@@ -20,9 +20,12 @@ const Footer = () => {
             <a href="#" className="flex items-center mb-4">
               <img src={Logo} alt="Flamelix" className="h-8 w-auto" />
             </a>
-            <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--dark-muted))" }}>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: "hsl(var(--dark-muted))" }}>
               {t("footer.desc")}
             </p>
+            <a href="mailto:rb@flamelix.com" className="text-sm text-primary hover:underline">
+              rb@flamelix.com
+            </a>
           </div>
 
           {/* Col 2 — Nav */}
