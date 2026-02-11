@@ -141,7 +141,7 @@ const ContactSection = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full py-4 rounded-2xl text-sm font-medium transition-all ${
+                className={`w-full py-4 rounded-xl text-sm font-medium transition-all ${
                   sent
                     ? "bg-green-600 text-white"
                     : error
