@@ -88,7 +88,7 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="flex flex-wrap gap-12 md:gap-20 pt-10 border-t animate-fade-in-up"
+          className="grid grid-cols-3 pt-10 border-t animate-fade-in-up"
           style={{ animationDelay: "0.4s", borderColor: "hsl(var(--dark-border))" }}
         >
           {[
