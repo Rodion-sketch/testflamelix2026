@@ -25,8 +25,8 @@ const TestimonialsSection = () => {
 
               <blockquote className="text-base md:text-lg leading-relaxed text-foreground/85 mb-8 space-y-4">
                 <p>{t("testimonials.1.text1")}</p>
-                {t("testimonials.1.text2") && <p>{t("testimonials.1.text2")}</p>}
-                {t("testimonials.1.text3") && <p>{t("testimonials.1.text3")}</p>}
+                {(() => { const v2 = t("testimonials.1.text2"); return v2 && !v2.includes("testimonials.") ? <p>{v2}</p> : null; })()}
+                {(() => { const v3 = t("testimonials.1.text3"); return v3 && !v3.includes("testimonials.") ? <p>{v3}</p> : null; })()}
               </blockquote>
 
               <div className="flex items-center gap-4 pt-6 border-t border-border">
