@@ -37,16 +37,16 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Challenges
     "challenges.subtitle": "Вызовы",
-    "challenges.title": "Мы понимаем вызовы, с которыми вы сталкиваетесь",
-    "challenges.1": "Маркетинговые бюджеты без измеримого ROI",
-    "challenges.2": "Разрозненные команды — стратегия, креатив и аналитика в отрыве",
-    "challenges.3": "Невыполнение планов продаж из-за отсутствия data-driven подхода",
-    "challenges.4": "Технологические инвестиции, увеличивающие затраты вместо роста",
+    "challenges.title": "Знакомые проблемы?",
+    "challenges.1": "Маркетинговые бюджеты растут, а ROI не измеряется",
+    "challenges.2": "Стратегия, креатив и аналитика живут в разных мирах",
+    "challenges.3": "Планы продаж не выполняются — нет data-driven подхода",
+    "challenges.4": "Технологии увеличивают затраты, а не выручку",
 
     // Services
     "services.subtitle": "Услуги",
     "services.title": "Что мы делаем",
-    "services.description": "Формируем готовую команду, которая берёт на себя полное внедрение вашей маркетинговой системы.",
+    "services.description": "Готовая команда, которая берёт на себя маркетинг от стратегии до результата.",
     "services.research.title": "Исследования",
     "services.research.desc": "Анализ рынка, глубинные интервью, аудит процессов, оценка потенциала рекламных каналов.",
     "services.cx.title": "Customer Experience",
@@ -60,7 +60,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.analytics.title": "Сквозная аналитика",
     "services.analytics.desc": "От расходов на рекламу до закрытых сделок в CRM.",
     "services.partners.title": "Партнёрский маркетинг",
-    "services.partners.desc": "Системы взаимодействия с агентствами недвижимости.",
+    "services.partners.desc": "Выстраиваем системную работу с агентствами недвижимости: мотивация, обучение, контроль воронки.",
 
     // Process
     "process.subtitle": "Процесс",
@@ -79,7 +79,7 @@ const translations: Record<Language, Record<string, string>> = {
     "cases.subtitle": "Проекты",
     "cases.title": "Наш опыт",
     "cases.description": "Более 30 проектов с ведущими девелоперами России и международными компаниями.",
-    "cases.more": "И ещё более 30 проектов в сфере недвижимости",
+    "cases.more": "И другие проекты в сфере недвижимости и не только",
     "cases.mrgroup.badge": "Customer Experience",
     "cases.mrgroup.desc": "Ведём CX-проекты по улучшению цифровой трансформации и качества сервиса для роста NPS. Помогаем внедрять онлайн-сделку с недвижимостью, сайт-маркетплейс и мобильное приложение.",
     "cases.mrgroup.kpi1": "и рост NPS",
@@ -97,8 +97,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Team
     "team.subtitle": "Команда",
-    "team.title": "Эксперты с опытом",
-    "team.description": "Профессионалы с многолетним опытом работы с ведущими девелоперами.",
+    "team.title": "Core-команда",
+    "team.description": "Каждый из нас работал на стороне клиента и знает бизнес изнутри.",
     "team.member1.name": "Родион Ангаев",
     "team.member1.role": "Growth-стратегии и Data-Driven маркетинг",
     "team.member1.desc": "Маркетинг на основе данных, партнёрский маркетинг, performance-реклама. Управляет KPI по привлечению и конверсии лидов.",
@@ -168,9 +168,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Hero
     "hero.subtitle": "Marketing and IT Team",
-    "hero.title": "Helping developers",
-    "hero.titleAccent": "achieve sales targets",
-    "hero.description": "Customer experience, digital transformation, lead generation and analytics — from strategy to closed deals.",
+    "hero.title": "Helping real estate developers",
+    "hero.titleAccent": "hit sales targets",
+    "hero.description": "Customer experience, digital transformation, lead generation & analytics — from strategy to closed deals.",
     "hero.cta1": "Discuss project",
     "hero.cta2": "Our cases",
     "hero.stat1.value": "30+",
@@ -185,16 +185,16 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Challenges
     "challenges.subtitle": "Challenges",
-    "challenges.title": "We understand the challenges you face",
-    "challenges.1": "Marketing budgets without measurable ROI",
-    "challenges.2": "Disconnected teams — strategy, creative and analytics working in silos",
-    "challenges.3": "Missed sales targets due to lack of data-driven approach",
-    "challenges.4": "Tech investments that increase costs instead of growth",
+    "challenges.title": "Sound familiar?",
+    "challenges.1": "Marketing budgets grow, but ROI stays unmeasured",
+    "challenges.2": "Strategy, creative and analytics live in different silos",
+    "challenges.3": "Sales targets missed — no data-driven approach in place",
+    "challenges.4": "Technology increases costs, not revenue",
 
     // Services
     "services.subtitle": "Services",
     "services.title": "What we do",
-    "services.description": "We form a ready-made team that takes full ownership of implementing your marketing system.",
+    "services.description": "A ready-made team that owns your marketing from strategy to results.",
     "services.research.title": "Research",
     "services.research.desc": "Market analysis, in-depth interviews, process audits, advertising channel assessment.",
     "services.cx.title": "Customer Experience",
@@ -208,7 +208,7 @@ const translations: Record<Language, Record<string, string>> = {
     "services.analytics.title": "End-to-End Analytics",
     "services.analytics.desc": "From ad spend to closed deals in CRM.",
     "services.partners.title": "Partner Marketing",
-    "services.partners.desc": "Building relationships with real estate agencies.",
+    "services.partners.desc": "Systematic work with real estate agencies: motivation, training, funnel control.",
 
     // Process
     "process.subtitle": "Process",
@@ -225,9 +225,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Projects / Cases
     "cases.subtitle": "Projects",
-    "cases.title": "Our Experience",
-    "cases.description": "Over 30 projects with leading Russian developers and international companies.",
-    "cases.more": "And more than 30 projects in real estate",
+    "cases.title": "Case Studies",
+    "cases.description": "30+ projects with leading Russian and international real estate companies.",
+    "cases.more": "And more projects across real estate and beyond",
     "cases.mrgroup.badge": "Customer Experience",
     "cases.mrgroup.desc": "Leading Customer Experience initiatives to improve digital transformation and service quality, driving NPS growth. Helping implement online real estate transactions, marketplace website, and mobile app.",
     "cases.mrgroup.kpi1": "& NPS Growth",
@@ -245,8 +245,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Team
     "team.subtitle": "Team",
-    "team.title": "Experienced Experts",
-    "team.description": "Professionals with years of experience working with leading developers.",
+    "team.title": "Core Team",
+    "team.description": "Each of us has worked client-side and knows the business from within.",
     "team.member1.name": "Rodion Angaev",
     "team.member1.role": "Growth Strategies & Data-Driven Marketing",
     "team.member1.desc": "Data-driven marketing, partner marketing, performance advertising. Manages lead acquisition and conversion KPIs.",
