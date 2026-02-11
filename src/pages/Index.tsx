@@ -24,8 +24,8 @@ const Index = () => {
         <ProcessSection />
         <ProjectsSection />
         <CTABandSection />
-        <TeamSection />
         <TestimonialsSection />
+        <TeamSection />
         <FAQSection />
         <ContactSection />
       </main>
