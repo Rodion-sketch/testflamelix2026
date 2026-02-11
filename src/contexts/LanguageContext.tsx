@@ -91,7 +91,7 @@ const translations: Record<Language, Record<string, string>> = {
     "cases.knight.desc": "Удвоили продажи жилой, коммерческой и зарубежной недвижимости за год. Построили прибыльный digital-маркетинг.",
 
     // CTA Band
-    "cta.title": "Готовы к системному маркетингу?",
+    "cta.title": "Готовы к системным результатам?",
     "cta.subtitle": "Обсудим ваш проект и подберём оптимальное решение.",
     "cta.btn": "Связаться",
 
@@ -239,7 +239,7 @@ const translations: Record<Language, Record<string, string>> = {
     "cases.knight.desc": "Doubled sales of residential, commercial, and international real estate in one year. Built profitable digital marketing.",
 
     // CTA Band
-    "cta.title": "Ready for systematic marketing?",
+    "cta.title": "Ready for systematic results?",
     "cta.subtitle": "Let's discuss your project and find the best solution.",
     "cta.btn": "Get in touch",
 
