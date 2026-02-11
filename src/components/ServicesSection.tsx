@@ -17,9 +17,6 @@ const ServicesSection = () => {
     <section id="services" className="section-padding">
       <div className="container-narrow">
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <p className="text-xs tracking-[0.3em] uppercase text-primary mb-5">
-            {t("services.subtitle")}
-          </p>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-display text-foreground mb-6">
             {t("services.title")}
           </h2>
