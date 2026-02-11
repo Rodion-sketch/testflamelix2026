@@ -97,7 +97,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Team
     "team.subtitle": "Команда",
-    "team.title": "Core-команда",
+    "team.title": "Эксперты с опытом",
     "team.description": "Каждый из нас работал на стороне клиента и знает бизнес изнутри.",
     "team.member1.name": "Родион Ангаев",
     "team.member1.role": "Growth-стратегии и Data-Driven маркетинг",
@@ -245,7 +245,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Team
     "team.subtitle": "Team",
-    "team.title": "Core Team",
+    "team.title": "Experienced Experts",
     "team.description": "Each of us has worked client-side and knows the business from within.",
     "team.member1.name": "Rodion Angaev",
     "team.member1.role": "Growth Strategies & Data-Driven Marketing",
