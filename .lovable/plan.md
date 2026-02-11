@@ -1,47 +1,28 @@
 
 
-# Исправляем ритм чередования цветов секций
+# Убираем подзаголовок Hero и обновляем тексты
 
-## Проблема
+## Что делаем
 
-Сейчас два тёмных блока идут подряд (CTA Band + Team), и два светлых подряд (Testimonials + FAQ). Это нарушает визуальный ритм и делает страницу "плоской" в этих местах.
+### 1. Hero — убираем подзаголовок полностью
+Удаляем строку `{t("hero.subtitle")}` из `HeroSection.tsx`. Заголовок "Помогаем девелоперам выполнять планы продаж" говорит сам за себя — лишняя плашка сверху только сужает восприятие.
 
-## Решение
+### 2. Contact title — переписываем шире
+- **RU**: "Давайте построим вашу маркетинговую систему" → **"Обсудим ваш проект"**
+- **EN**: "Let's build your marketing system" → **"Let's discuss your project"**
 
-Поменять местами Team и Testimonials в порядке секций. Это даёт идеальное чередование:
+Нейтрально, приглашающе, не ограничивает тематику обращения.
 
-| # | Секция | Фон |
-|---|--------|-----|
-| 1 | Hero | dark |
-| 2 | TrustedBy | light (тонкий) |
-| 3 | Services | light |
-| 4 | Process | dark |
-| 5 | Projects | light |
-| 6 | CTA Band | dark |
-| 7 | Testimonials | light |
-| 8 | Team | dark |
-| 9 | FAQ | light |
-| 10 | Contact | dark |
-| 11 | Footer | dark (продолжение Contact) |
+### 3. Footer desc — переписываем шире
+- **RU**: "Маркетинговая и IT-команда для девелоперов..." → **"Помогаем девелоперам выполнять планы продаж. Стратегия, маркетинг, технологии и клиентский опыт."**
+- **EN**: "Marketing and IT team for developers..." → **"Helping real estate developers hit sales targets. Strategy, marketing, technology and customer experience."**
 
-Каждая тёмная секция окружена светлыми и наоборот — чистое чередование.
+Перечисляем направления через запятую — честно и без попытки втиснуть всё в одно слово.
 
 ## Технические детали
 
-Один файл: `src/pages/Index.tsx` — поменять порядок `<TestimonialsSection />` и `<TeamSection />`.
+Два файла:
 
-Было:
-```
-<CTABandSection />
-<TeamSection />
-<TestimonialsSection />
-```
+1. **`src/components/HeroSection.tsx`** — удалить блок `<p>` с `{t("hero.subtitle")}` (строки 50-52)
+2. **`src/contexts/LanguageContext.tsx`** — обновить значения ключей `contact.title` и `footer.desc` в русской и английской локали
 
-Станет:
-```
-<CTABandSection />
-<TestimonialsSection />
-<TeamSection />
-```
-
-Никаких других изменений не требуется — фоны секций уже корректно заданы (Team = section-dark, Testimonials = bg-background).
