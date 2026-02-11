@@ -28,8 +28,8 @@ const TestimonialsSection = () => {
 
               <blockquote className="text-base md:text-lg leading-relaxed text-foreground/85 mb-8 space-y-4">
                 <p>{t("testimonials.1.text1")}</p>
-                <p>{t("testimonials.1.text2")}</p>
-                <p>{t("testimonials.1.text3")}</p>
+                {t("testimonials.1.text2") && <p>{t("testimonials.1.text2")}</p>}
+                {t("testimonials.1.text3") && <p>{t("testimonials.1.text3")}</p>}
               </blockquote>
 
               <div className="flex items-center gap-4 pt-6 border-t border-border">
