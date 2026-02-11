@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import TrustedBySection from "@/components/TrustedBySection";
-import ChallengesSection from "@/components/ChallengesSection";
+
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -19,7 +19,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <TrustedBySection />
-        <ChallengesSection />
+        
         <ServicesSection />
         <ProcessSection />
         <ProjectsSection />
