@@ -15,9 +15,6 @@ const TeamSection = () => {
       <div className="container-narrow">
         {/* Section header — centered */}
         <div className="max-w-3xl mx-auto text-center mb-20">
-          <p className="text-xs tracking-[0.3em] uppercase text-primary mb-5">
-            {t("team.subtitle")}
-          </p>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-display mb-6" style={{ color: "hsl(var(--dark-fg))" }}>
             {t("team.title")}
           </h2>

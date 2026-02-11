@@ -47,9 +47,6 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
           {/* Left — info */}
           <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-primary mb-5">
-              {t("contact.subtitle")}
-            </p>
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-display mb-6"
               style={{ color: "hsl(var(--dark-fg))" }}
