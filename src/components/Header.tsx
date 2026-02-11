@@ -65,7 +65,7 @@ const Header = () => {
             <LanguageSwitcher scrolled={scrolled} />
             <a
               href="#contact"
-              className="text-[13px] font-medium bg-primary text-primary-foreground px-5 py-2 rounded-2xl hover:opacity-90 transition-opacity"
+              className="text-[13px] font-medium bg-primary text-primary-foreground px-5 py-2 rounded-xl hover:opacity-90 transition-opacity"
             >
               {t("nav.cta")}
             </a>
@@ -105,7 +105,7 @@ const Header = () => {
               <a
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-2xl self-start mt-2 text-center"
+                className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-xl self-start mt-2 text-center"
               >
                 {t("nav.cta")}
               </a>

@@ -27,7 +27,7 @@ const CTABandSection = () => {
           </div>
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-opacity rounded-2xl group shrink-0"
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-opacity rounded-xl group shrink-0"
           >
             {t("cta.btn")}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
