@@ -61,10 +61,10 @@ const ContactSection = () => {
             </p>
 
             <div className="space-y-5">
-              <a href="mailto:info@flamelix.com" className="flex items-center gap-3 group">
+              <a href="mailto:rb@flamelix.com" className="flex items-center gap-3 group">
                 <Mail className="h-4 w-4 text-primary" strokeWidth={1.5} />
                 <span className="text-sm group-hover:text-primary transition-colors" style={{ color: "hsl(var(--dark-fg))" }}>
-                  info@flamelix.com
+                  rb@flamelix.com
                 </span>
               </a>
               <a href="https://wa.me/79032317693" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
