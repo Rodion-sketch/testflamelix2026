@@ -138,7 +138,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Contact
     "contact.subtitle": "Контакты",
-    "contact.title": "Давайте построим вашу маркетинговую систему",
+    "contact.title": "Обсудим ваш проект",
     "contact.description": "Расскажите о проекте, и мы предложим оптимальное решение для выполнения планов продаж.",
     "contact.email": "Email",
     "contact.whatsapp": "WhatsApp",
@@ -153,7 +153,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.sent": "Отправлено!",
 
     // Footer
-    "footer.desc": "Маркетинговая и IT-команда для девелоперов. Стратегия, лидогенерация, CRM и сквозная аналитика.",
+    "footer.desc": "Помогаем девелоперам выполнять планы продаж. Стратегия, маркетинг, технологии и клиентский опыт.",
     "footer.rights": "Все права защищены",
     "footer.copy": "© 2026 Flamelix. Все права защищены.",
   },
@@ -286,7 +286,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Contact
     "contact.subtitle": "Contact",
-    "contact.title": "Let's build your marketing system",
+    "contact.title": "Let's discuss your project",
     "contact.description": "Tell us about your project and we'll propose the optimal solution for achieving your sales targets.",
     "contact.email": "Email",
     "contact.whatsapp": "WhatsApp",
@@ -301,7 +301,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.sent": "Sent!",
 
     // Footer
-    "footer.desc": "Marketing and IT team for developers. Strategy, lead generation, CRM and end-to-end analytics.",
+    "footer.desc": "Helping real estate developers hit sales targets. Strategy, marketing, technology and customer experience.",
     "footer.rights": "All rights reserved",
     "footer.copy": "© 2026 Flamelix. All rights reserved.",
   },

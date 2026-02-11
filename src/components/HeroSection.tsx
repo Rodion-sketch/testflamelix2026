@@ -47,10 +47,6 @@ const HeroSection = () => {
       </div>
 
       <div className="container-narrow section-padding pt-40 lg:pt-48 pb-16 lg:pb-24 relative z-10">
-        <p className="text-xs tracking-[0.3em] uppercase text-primary mb-10 animate-fade-in-up">
-          {t("hero.subtitle")}
-        </p>
-
         <h1
           className="text-5xl md:text-7xl lg:text-[5.5rem] font-display leading-[1.05] mb-10 animate-fade-in-up max-w-4xl"
           style={{ animationDelay: "0.1s" }}
