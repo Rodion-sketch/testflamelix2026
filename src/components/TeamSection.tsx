@@ -5,7 +5,6 @@ const TeamSection = () => {
 
   const team = [
     { name: t("team.member1.name"), role: t("team.member1.role"), description: t("team.member1.desc"), initials: "РА" },
-    { name: t("team.member2.name"), role: t("team.member2.role"), description: t("team.member2.desc"), initials: "ИВ" },
     { name: t("team.member3.name"), role: t("team.member3.role"), description: t("team.member3.desc"), initials: "АВ" },
     { name: t("team.member4.name"), role: t("team.member4.role"), description: t("team.member4.desc"), initials: "АС" },
   ];
