@@ -101,7 +101,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.description": "Каждый из нас работал на стороне клиента и знает бизнес изнутри.",
     "team.member1.name": "Родион Ангаев",
     "team.member1.role": "Growth-стратегии, Data-Driven маркетинг и клиентский опыт",
-    "team.member1.desc": "Маркетинг на основе данных, партнёрский маркетинг, performance-реклама. Управляет KPI по привлечению и конверсии лидов.",
+    "team.member1.desc": "Маркетинг на основе данных, performance-реклама, проектирование клиентского пути. Выстраивает CX-стратегии от первого касания до повторной покупки.",
     "team.member2.name": "Илья Волгин",
     "team.member2.role": "Customer Experience и цифровая трансформация",
     "team.member2.desc": "Сайты-маркетплейсы, мобильные приложения, онлайн-сделки. Руководитель департамента цифровизации MR Group.",
@@ -110,7 +110,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.member3.desc": "30+ проектов в недвижимости. Сайты, лендинги, презентации и рекламные креативы для девелоперов.",
     "team.member4.name": "Андрей Соколов",
     "team.member4.role": "Бизнес-анализ, аналитика и клиентский опыт",
-    "team.member4.desc": "Сквозная аналитика от рекламного бюджета до сделок в CRM. Автоматизация маркетинга и продаж.",
+    "team.member4.desc": "Бизнес-анализ процессов продаж и сервиса. Сквозная аналитика, оптимизация клиентского опыта на каждом этапе воронки.",
 
     // Testimonials
     "testimonials.subtitle": "Отзывы",
@@ -249,7 +249,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.description": "Each of us has worked client-side and knows the business from within.",
     "team.member1.name": "Rodion Angaev",
     "team.member1.role": "Growth Strategies, Data-Driven Marketing & Customer Experience",
-    "team.member1.desc": "Data-driven marketing, partner marketing, performance advertising. Manages lead acquisition and conversion KPIs.",
+    "team.member1.desc": "Data-driven marketing, performance advertising, customer journey design. Builds CX strategies from first touch to repeat purchase.",
     "team.member2.name": "Ilya Volgin",
     "team.member2.role": "Customer Experience & Digital Transformation",
     "team.member2.desc": "Marketplace websites, mobile apps, online transactions. Director of Digital Transformation at MR Group.",
@@ -258,7 +258,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.member3.desc": "30+ real estate projects. Websites, landing pages, presentations and advertising creatives for developers.",
     "team.member4.name": "Andrey Sokolov",
     "team.member4.role": "Business Analysis, Analytics & Customer Experience",
-    "team.member4.desc": "End-to-end analytics from ad budget to deals in CRM. Marketing and sales automation.",
+    "team.member4.desc": "Business analysis of sales and service processes. End-to-end analytics, customer experience optimization at every funnel stage.",
 
     // Testimonials
     "testimonials.subtitle": "Testimonials",
