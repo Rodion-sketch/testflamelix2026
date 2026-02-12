@@ -100,7 +100,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.title": "Эксперты с опытом",
     "team.description": "Каждый из нас работал на стороне клиента и знает бизнес изнутри.",
     "team.member1.name": "Родион Ангаев",
-    "team.member1.role": "Growth-стратегии и Data-Driven маркетинг",
+    "team.member1.role": "Growth-стратегии, Data-Driven маркетинг и клиентский опыт",
     "team.member1.desc": "Маркетинг на основе данных, партнёрский маркетинг, performance-реклама. Управляет KPI по привлечению и конверсии лидов.",
     "team.member2.name": "Илья Волгин",
     "team.member2.role": "Customer Experience и цифровая трансформация",
@@ -109,7 +109,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.member3.role": "Брендинг, сайты и презентации",
     "team.member3.desc": "30+ проектов в недвижимости. Сайты, лендинги, презентации и рекламные креативы для девелоперов.",
     "team.member4.name": "Андрей Соколов",
-    "team.member4.role": "Аналитика и автоматизация",
+    "team.member4.role": "Бизнес-анализ, аналитика и клиентский опыт",
     "team.member4.desc": "Сквозная аналитика от рекламного бюджета до сделок в CRM. Автоматизация маркетинга и продаж.",
 
     // Testimonials
@@ -248,7 +248,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.title": "Experienced Experts",
     "team.description": "Each of us has worked client-side and knows the business from within.",
     "team.member1.name": "Rodion Angaev",
-    "team.member1.role": "Growth Strategies & Data-Driven Marketing",
+    "team.member1.role": "Growth Strategies, Data-Driven Marketing & Customer Experience",
     "team.member1.desc": "Data-driven marketing, partner marketing, performance advertising. Manages lead acquisition and conversion KPIs.",
     "team.member2.name": "Ilya Volgin",
     "team.member2.role": "Customer Experience & Digital Transformation",
@@ -257,7 +257,7 @@ const translations: Record<Language, Record<string, string>> = {
     "team.member3.role": "Branding, Websites & Presentations",
     "team.member3.desc": "30+ real estate projects. Websites, landing pages, presentations and advertising creatives for developers.",
     "team.member4.name": "Andrey Sokolov",
-    "team.member4.role": "Analytics & Automation",
+    "team.member4.role": "Business Analysis, Analytics & Customer Experience",
     "team.member4.desc": "End-to-end analytics from ad budget to deals in CRM. Marketing and sales automation.",
 
     // Testimonials
