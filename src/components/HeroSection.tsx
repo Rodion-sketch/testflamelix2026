@@ -68,19 +68,6 @@ const HeroSection = () => {
       <div className="absolute bottom-1/3 left-[10%] w-56 h-56 rounded-full bg-primary/8 blur-[80px] animate-orbit-reverse pointer-events-none" />
 
       <div className="container-narrow section-padding pt-40 lg:pt-48 pb-16 lg:pb-24 relative z-10">
-        {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs tracking-widest uppercase font-medium mb-8 animate-fade-in-up"
-          style={{
-            borderColor: "hsl(var(--primary) / 0.3)",
-            color: "hsl(var(--primary))",
-            background: "hsl(var(--primary) / 0.08)",
-          }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-          {t("hero.badge") || "Marketing for Developers"}
-        </div>
-
         <h1
           className="text-5xl md:text-7xl lg:text-[5.5rem] font-display leading-[1.05] mb-10 animate-fade-in-up max-w-4xl"
           style={{ animationDelay: "0.1s", color: "hsl(0 0% 100%)" }}

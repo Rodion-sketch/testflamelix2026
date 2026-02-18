@@ -1,13 +1,16 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import ScrollReveal from "@/components/ScrollReveal";
+import teamAngaev from "@/assets/team-angaev.jpeg";
+import teamSokolov from "@/assets/team-sokolov.jpg";
+import teamVorobev from "@/assets/team-vorobev.jpg";
 
 const TeamSection = () => {
   const { t } = useLanguage();
 
   const team = [
-    { name: t("team.member1.name"), role: t("team.member1.role"), description: t("team.member1.desc"), initials: "РА" },
-    { name: t("team.member4.name"), role: t("team.member4.role"), description: t("team.member4.desc"), initials: "АС" },
-    { name: t("team.member3.name"), role: t("team.member3.role"), description: t("team.member3.desc"), initials: "АВ" },
+    { name: t("team.member1.name"), role: t("team.member1.role"), description: t("team.member1.desc"), photo: teamAngaev },
+    { name: t("team.member4.name"), role: t("team.member4.role"), description: t("team.member4.desc"), photo: teamSokolov },
+    { name: t("team.member3.name"), role: t("team.member3.role"), description: t("team.member3.desc"), photo: teamVorobev },
   ];
 
   return (
@@ -28,10 +31,12 @@ const TeamSection = () => {
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 0.1}>
               <div className="glass-card-dark p-8 rounded-2xl transition-all duration-400 hover:-translate-y-2 hover-glow gradient-border-hover group text-center">
-                <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] transition-all duration-300 border border-primary/20">
-                  <span className="text-primary text-lg font-semibold">
-                    {member.initials}
-                  </span>
+                <div className="mx-auto w-24 h-24 rounded-full overflow-hidden mb-5 group-hover:scale-110 group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] transition-all duration-300 border-2 border-primary/20">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top grayscale"
+                  />
                 </div>
                 <h3 className="text-lg font-display mb-1" style={{ color: "hsl(var(--dark-fg))" }}>
                   {member.name}
