@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Quote } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import sarperPhoto from "@/assets/testimonial-sarper.jpg";
 
 const TestimonialsSection = () => {
   const { t } = useLanguage();
@@ -36,8 +37,8 @@ const TestimonialsSection = () => {
                 </blockquote>
 
                 <div className="flex items-center gap-4 pt-8 border-t border-border/50">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/25 to-primary/10 flex items-center justify-center text-primary font-display text-lg border border-primary/20">
-                    {t("testimonials.1.initials")}
+                  <div className="w-14 h-14 rounded-full overflow-hidden border border-primary/20">
+                    <img src={sarperPhoto} alt={t("testimonials.1.name")} className="w-full h-full object-cover object-top grayscale" />
                   </div>
                   <div>
                     <p className="font-display text-base text-foreground font-medium">
