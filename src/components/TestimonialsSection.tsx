@@ -38,13 +38,13 @@ const TestimonialsSection = () => {
 
                 <div className="flex items-center gap-4 pt-8 border-t border-border/50">
                   <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20">
-                    <img src={sarperPhoto} alt={t("testimonials.1.name")} className="w-full h-full object-cover object-top grayscale" />
+                    <img src={sarperPhoto} alt={t("testimonials.1.name")} className="w-full h-full object-cover grayscale" style={{ objectPosition: "50% 20%", transform: "scale(0.75)" }} />
                   </div>
                   <div>
-                    <p className="font-display text-base text-foreground font-medium">
+                    <p className="font-display text-lg text-foreground font-medium">
                       {t("testimonials.1.name")}
                     </p>
-                    <p className="text-sm text-muted-foreground font-sans">
+                    <p className="text-base text-muted-foreground font-sans">
                       {t("testimonials.1.role")}
                     </p>
                   </div>
