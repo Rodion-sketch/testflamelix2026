@@ -33,18 +33,40 @@ const useAnimatedCounter = (target: number, duration = 2000) => {
   return { value, ref };
 };
 
+const useParallax = () => {
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    const onScroll = () => setOffset(window.scrollY * 0.3);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return offset;
+};
+
 const HeroSection = () => {
   const { t } = useLanguage();
   const counter1 = useAnimatedCounter(30);
   const counter2 = useAnimatedCounter(7);
   const counter3 = useAnimatedCounter(5);
+  const parallaxOffset = useParallax();
 
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden section-dark">
+      {/* Parallax background */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="" className="w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--dark-bg))] via-[hsl(var(--dark-bg)/0.7)] to-transparent" />
+        <img
+          src={heroImage}
+          alt=""
+          className="w-full h-[120%] object-cover opacity-35"
+          style={{ transform: `translateY(-${parallaxOffset}px)` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--dark-bg))] via-[hsl(var(--dark-bg)/0.6)] to-[hsl(var(--dark-bg)/0.3)]" />
       </div>
+
+      {/* Floating decorative orbs */}
+      <div className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-primary/10 blur-[80px] animate-orbit pointer-events-none" />
+      <div className="absolute bottom-1/3 left-[10%] w-48 h-48 rounded-full bg-primary/8 blur-[60px] animate-orbit-reverse pointer-events-none" />
+      <div className="absolute top-1/2 right-[40%] w-32 h-32 rounded-full bg-primary/5 blur-[50px] animate-orbit pointer-events-none" style={{ animationDelay: "3s" }} />
 
       <div className="container-narrow section-padding pt-40 lg:pt-48 pb-16 lg:pb-24 relative z-10">
         <h1
@@ -69,14 +91,14 @@ const HeroSection = () => {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-all rounded-xl group"
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-all rounded-xl group hover-glow"
           >
             {t("hero.cta1")}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 border border-[hsl(var(--dark-border))] px-8 py-4 text-sm font-medium hover:border-primary/60 hover:bg-[hsl(var(--dark-card))] transition-all rounded-xl"
+            className="inline-flex items-center gap-2 border border-[hsl(var(--dark-border))] px-8 py-4 text-sm font-medium hover:border-primary/60 hover:bg-[hsl(var(--dark-card))] transition-all rounded-xl glass-card-dark"
             style={{ color: "hsl(var(--dark-fg))" }}
           >
             {t("hero.cta2")}
