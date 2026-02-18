@@ -23,10 +23,6 @@ const TestimonialsSection = () => {
               <div className="absolute top-0 right-0 w-72 h-72 bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/6 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/3" />
 
-              {/* Large decorative quote */}
-              <div className="absolute top-6 right-8 text-primary/8">
-                <Quote className="w-24 h-24" />
-              </div>
 
               <div className="relative">
                 <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-8">
