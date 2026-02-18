@@ -8,9 +8,9 @@ const TeamSection = () => {
   const { t } = useLanguage();
 
   const team = [
-    { name: t("team.member1.name"), role: t("team.member1.role"), description: t("team.member1.desc"), photo: teamAngaev, objectPos: "50% 15%" },
-    { name: t("team.member4.name"), role: t("team.member4.role"), description: t("team.member4.desc"), photo: teamSokolov, objectPos: "50% 20%" },
-    { name: t("team.member3.name"), role: t("team.member3.role"), description: t("team.member3.desc"), photo: teamVorobev, objectPos: "50% 25%" },
+    { name: t("team.member1.name"), role: t("team.member1.role"), description: t("team.member1.desc"), photo: teamAngaev, objectPos: "50% 15%", scale: "scale-[1.4]" },
+    { name: t("team.member4.name"), role: t("team.member4.role"), description: t("team.member4.desc"), photo: teamSokolov, objectPos: "50% 20%", scale: "" },
+    { name: t("team.member3.name"), role: t("team.member3.role"), description: t("team.member3.desc"), photo: teamVorobev, objectPos: "50% 25%", scale: "scale-[0.85]" },
   ];
 
   return (
@@ -35,7 +35,7 @@ const TeamSection = () => {
                   <img
                     src={member.photo}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale"
+                    className={`w-full h-full object-cover grayscale ${member.scale}`}
                     style={{ objectPosition: member.objectPos }}
                   />
                 </div>
