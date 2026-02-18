@@ -131,8 +131,8 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a2": "Мы работаем не как подрядчик, а как встроенная команда. Покрываем весь цикл: research, CX, стратегия, лидогенерация, CRM и аналитика. Погружаемся в бизнес-процессы и отвечаем за конверсии, а не за охваты.",
     "faq.q3": "С какими отраслями вы работаете?",
     "faq.a3": "Основной фокус — девелопмент и недвижимость: MR Group, Knight Frank, ENKA и другие. Работаем в 5 странах. Также помогаем tech-компаниям, hospitality и luxury-сегменту.",
-    "faq.q4": "Нужна ли собственная маркетинговая команда?",
-    "faq.a4": "Нет. Мы полностью закрываем функцию маркетинга — от стратегии до операционного управления. При необходимости помогаем нанять и обучить внутреннюю команду.",
+    "faq.q4": "У нас есть специалисты в штате, как выстраивать работу?",
+    "faq.a4": "Мы работаем сообща с внутренней командой, усиливая её экспертизой и ресурсами. Берём на себя стратегию, аналитику и операционное управление, а при необходимости передаём накопленный опыт и процессы внутрь компании.",
     "faq.q5": "Как вы измеряете успех?",
     "faq.a5": "Через сквозную аналитику: отслеживаем весь путь от рекламного бюджета до закрытых сделок в CRM. Отчитываемся по конкретным KPI, привязанным к плану продаж.",
 
@@ -279,8 +279,8 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.a2": "We work as an embedded team, not a contractor. We cover the full cycle: research, CX, strategy, lead generation, CRM and analytics. We dive into business processes and are accountable for conversions, not reach.",
     "faq.q3": "What industries do you work with?",
     "faq.a3": "Our main focus is development and real estate: MR Group, Knight Frank, ENKA and others. We operate in 5 countries. We also help tech companies, hospitality and luxury segment.",
-    "faq.q4": "Do we need our own marketing team?",
-    "faq.a4": "No. We fully cover the marketing function — from strategy to operational management. If needed, we help hire and train an internal team.",
+    "faq.q4": "We have in-house specialists — how do we work together?",
+    "faq.a4": "We collaborate closely with your internal team, strengthening it with our expertise and resources. We take on strategy, analytics and operational management, and when needed, transfer our experience and processes into the company.",
     "faq.q5": "How do you measure success?",
     "faq.a5": "Through end-to-end analytics: we track the entire path from ad budget to closed deals in CRM. We report on specific KPIs tied to sales plans.",
 
