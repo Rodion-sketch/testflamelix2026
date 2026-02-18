@@ -26,35 +26,47 @@ const ProcessSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="border-t" style={{ borderColor: "hsl(var(--dark-border))" }}>
-          {steps.map((step, i) => (
-            <ScrollReveal key={step.num} delay={i * 0.1} direction="right">
-              <div
-                className="grid grid-cols-12 gap-6 py-10 border-b group hover:translate-x-2 transition-transform duration-300 cursor-default"
-                style={{ borderColor: "hsl(var(--dark-border))" }}
-              >
-                <div className="col-span-2 md:col-span-1">
-                  <span className="text-sm font-mono text-primary">/{step.num}</span>
-                </div>
-                <div className="col-span-8 md:col-span-9">
-                  <h3 className="text-xl md:text-2xl font-display mb-2" style={{ color: "hsl(var(--dark-fg))" }}>
-                    {step.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--dark-muted))" }}>
-                    {step.desc}
-                  </p>
-                </div>
-                <div className="col-span-2 flex items-center justify-end">
-                  <div
-                    className="w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform"
-                    style={{ backgroundColor: "hsl(var(--primary) / 0.1)" }}
-                  >
-                    <step.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+        <div className="relative">
+          {/* Vertical timeline line */}
+          <div
+            className="absolute left-6 md:left-8 top-0 bottom-0 w-px hidden md:block"
+            style={{ background: "linear-gradient(to bottom, hsl(var(--primary) / 0.4), hsl(var(--primary) / 0.05))" }}
+          />
+
+          <div className="space-y-2">
+            {steps.map((step, i) => (
+              <ScrollReveal key={step.num} delay={i * 0.1} direction="right">
+                <div
+                  className="relative grid grid-cols-12 gap-6 py-8 md:py-10 group cursor-default rounded-2xl hover:bg-[hsl(var(--dark-card)/0.5)] transition-all duration-300 px-4"
+                >
+                  {/* Timeline dot */}
+                  <div className="hidden md:flex col-span-1 items-start justify-center pt-1 relative z-10">
+                    <div className="w-4 h-4 rounded-full bg-primary/20 border-2 border-primary/50 group-hover:bg-primary group-hover:border-primary group-hover:shadow-[0_0_16px_hsl(var(--primary)/0.4)] transition-all duration-300" />
+                  </div>
+                  <div className="col-span-1 md:hidden">
+                    <span className="text-2xl font-display text-gradient font-medium">{step.num}</span>
+                  </div>
+                  <div className="col-span-9 md:col-span-9">
+                    <span className="hidden md:inline text-xs font-mono text-primary/60 mb-1 block">/{step.num}</span>
+                    <h3 className="text-xl md:text-2xl font-display mb-2" style={{ color: "hsl(var(--dark-fg))" }}>
+                      {step.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--dark-muted))" }}>
+                      {step.desc}
+                    </p>
+                  </div>
+                  <div className="col-span-2 flex items-center justify-end">
+                    <div
+                      className="w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.2)] transition-all duration-300"
+                      style={{ background: "linear-gradient(135deg, hsl(var(--primary) / 0.15), hsl(var(--primary) / 0.05))" }}
+                    >
+                      <step.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

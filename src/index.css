@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    /* Warm light palette — Claude-inspired */
-    --background: 36 33% 97%;
-    --foreground: 30 10% 12%;
+    /* Refined warm palette — 2026 */
+    --background: 40 30% 98%;
+    --foreground: 25 15% 10%;
 
-    --card: 36 25% 94%;
-    --card-foreground: 30 10% 12%;
+    --card: 38 20% 95%;
+    --card-foreground: 25 15% 10%;
 
-    --popover: 36 33% 97%;
-    --popover-foreground: 30 10% 12%;
+    --popover: 40 30% 98%;
+    --popover-foreground: 25 15% 10%;
 
-    --primary: 20 65% 48%;
-    --primary-foreground: 36 33% 97%;
+    --primary: 24 85% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 15% 92%;
-    --secondary-foreground: 30 10% 12%;
+    --secondary: 35 18% 91%;
+    --secondary-foreground: 25 15% 10%;
 
-    --muted: 30 12% 90%;
-    --muted-foreground: 30 8% 46%;
+    --muted: 35 14% 89%;
+    --muted-foreground: 25 10% 42%;
 
-    --accent: 20 65% 48%;
-    --accent-foreground: 36 33% 97%;
+    --accent: 24 85% 52%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 15% 86%;
-    --input: 30 15% 86%;
-    --ring: 20 65% 48%;
+    --border: 32 18% 84%;
+    --input: 32 18% 84%;
+    --ring: 24 85% 52%;
 
     --radius: 0.75rem;
 
-    /* Dark section tokens */
-    --dark-bg: 30 15% 10%;
-    --dark-fg: 36 20% 90%;
-    --dark-muted: 30 8% 40%;
-    --dark-card: 30 12% 15%;
-    --dark-border: 30 10% 22%;
+    /* Dark section tokens — deeper, higher contrast */
+    --dark-bg: 25 20% 7%;
+    --dark-fg: 40 15% 93%;
+    --dark-muted: 30 10% 50%;
+    --dark-card: 25 15% 12%;
+    --dark-border: 25 12% 18%;
 
-    --sidebar-background: 30 20% 94%;
-    --sidebar-foreground: 30 10% 12%;
-    --sidebar-primary: 20 65% 48%;
-    --sidebar-primary-foreground: 36 33% 97%;
-    --sidebar-accent: 30 15% 92%;
-    --sidebar-accent-foreground: 30 10% 12%;
-    --sidebar-border: 30 15% 86%;
-    --sidebar-ring: 20 65% 48%;
+    --sidebar-background: 35 20% 94%;
+    --sidebar-foreground: 25 15% 10%;
+    --sidebar-primary: 24 85% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 18% 91%;
+    --sidebar-accent-foreground: 25 15% 10%;
+    --sidebar-border: 32 18% 84%;
+    --sidebar-ring: 24 85% 52%;
   }
 }
 
@@ -155,19 +155,41 @@
 
   /* Glass input for dark sections */
   .glass-input {
-    background: hsl(var(--dark-card) / 0.4);
+    background: hsl(var(--dark-card) / 0.7);
     backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--dark-border) / 0.6);
+    border: 1px solid hsl(var(--dark-border));
     color: hsl(var(--dark-fg));
     transition: border-color 0.3s, box-shadow 0.3s;
   }
   .glass-input:focus {
     border-color: hsl(var(--primary));
-    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.2);
+    box-shadow: 0 0 24px -4px hsl(var(--primary) / 0.35);
     outline: none;
   }
   .glass-input::placeholder {
-    color: hsl(var(--dark-muted) / 0.5);
+    color: hsl(var(--dark-muted) / 0.6);
+  }
+
+  /* Gradient text utility */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(24 90% 62%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Timeline line */
+  .timeline-line {
+    position: relative;
+  }
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, hsl(var(--primary) / 0.3), hsl(var(--primary) / 0.05));
   }
 }
 

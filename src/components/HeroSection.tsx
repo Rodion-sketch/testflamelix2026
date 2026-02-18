@@ -57,56 +57,69 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt=""
-          className="w-full h-[120%] object-cover opacity-35"
+          className="w-full h-[120%] object-cover opacity-30"
           style={{ transform: `translateY(-${parallaxOffset}px)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--dark-bg))] via-[hsl(var(--dark-bg)/0.6)] to-[hsl(var(--dark-bg)/0.3)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--dark-bg))] via-[hsl(var(--dark-bg)/0.7)] to-[hsl(var(--dark-bg)/0.2)]" />
       </div>
 
       {/* Floating decorative orbs */}
-      <div className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-primary/10 blur-[80px] animate-orbit pointer-events-none" />
-      <div className="absolute bottom-1/3 left-[10%] w-48 h-48 rounded-full bg-primary/8 blur-[60px] animate-orbit-reverse pointer-events-none" />
-      <div className="absolute top-1/2 right-[40%] w-32 h-32 rounded-full bg-primary/5 blur-[50px] animate-orbit pointer-events-none" style={{ animationDelay: "3s" }} />
+      <div className="absolute top-1/4 right-[15%] w-72 h-72 rounded-full bg-primary/12 blur-[100px] animate-orbit pointer-events-none" />
+      <div className="absolute bottom-1/3 left-[10%] w-56 h-56 rounded-full bg-primary/8 blur-[80px] animate-orbit-reverse pointer-events-none" />
 
       <div className="container-narrow section-padding pt-40 lg:pt-48 pb-16 lg:pb-24 relative z-10">
+        {/* Badge */}
+        <div
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-xs tracking-widest uppercase font-medium mb-8 animate-fade-in-up"
+          style={{
+            borderColor: "hsl(var(--primary) / 0.3)",
+            color: "hsl(var(--primary))",
+            background: "hsl(var(--primary) / 0.08)",
+          }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+          {t("hero.badge") || "Marketing for Developers"}
+        </div>
+
         <h1
           className="text-5xl md:text-7xl lg:text-[5.5rem] font-display leading-[1.05] mb-10 animate-fade-in-up max-w-4xl"
-          style={{ animationDelay: "0.1s" }}
+          style={{ animationDelay: "0.1s", color: "hsl(0 0% 100%)" }}
         >
           {t("hero.title")}
           <br />
-          <em className="text-primary font-light">{t("hero.titleAccent")}</em>
+          <em className="text-gradient font-light not-italic">{t("hero.titleAccent")}</em>
         </h1>
 
         <p
           className="text-lg md:text-xl leading-relaxed mb-14 max-w-xl animate-fade-in-up"
-          style={{ animationDelay: "0.2s", color: "hsl(var(--dark-muted))" }}
+          style={{ animationDelay: "0.2s", color: "hsl(var(--dark-fg) / 0.75)" }}
         >
           {t("hero.description")}
         </p>
 
         <div
-          className="flex flex-col sm:flex-row gap-4 mb-24 animate-fade-in-up"
+          className="flex flex-col sm:flex-row gap-4 mb-28 animate-fade-in-up"
           style={{ animationDelay: "0.3s" }}
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-medium hover:opacity-90 transition-all rounded-xl group hover-glow"
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4.5 text-sm font-medium hover:brightness-110 transition-all rounded-xl group hover-glow"
+            style={{ boxShadow: "0 8px 30px -6px hsl(var(--primary) / 0.5)" }}
           >
             {t("hero.cta1")}
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 border border-[hsl(var(--dark-border))] px-8 py-4 text-sm font-medium hover:border-primary/60 hover:bg-[hsl(var(--dark-card))] transition-all rounded-xl glass-card-dark"
-            style={{ color: "hsl(var(--dark-fg))" }}
+            className="inline-flex items-center gap-2 border px-10 py-4.5 text-sm font-medium hover:border-primary/60 hover:bg-[hsl(var(--dark-card)/0.6)] transition-all rounded-xl"
+            style={{ borderColor: "hsl(var(--dark-border))", color: "hsl(var(--dark-fg))" }}
           >
             {t("hero.cta2")}
           </a>
         </div>
 
         <div
-          className="grid grid-cols-3 pt-10 border-t animate-fade-in-up"
+          className="grid grid-cols-3 gap-8 pt-10 border-t animate-fade-in-up"
           style={{ animationDelay: "0.4s", borderColor: "hsl(var(--dark-border))" }}
         >
           {[
@@ -115,7 +128,7 @@ const HeroSection = () => {
             { ref: counter3.ref, value: `${counter3.value}`, label: t("hero.stat3.label") },
           ].map((stat) => (
             <div key={stat.label} ref={stat.ref}>
-              <p className="text-3xl md:text-4xl font-display text-primary">{stat.value}</p>
+              <p className="text-4xl md:text-5xl font-display text-gradient">{stat.value}</p>
               <p className="text-sm mt-2" style={{ color: "hsl(var(--dark-muted))" }}>
                 {stat.label}
               </p>

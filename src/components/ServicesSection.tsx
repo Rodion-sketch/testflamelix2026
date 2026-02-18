@@ -32,11 +32,11 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-3 gap-4 mb-4">
           {services.map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 0.08} className={service.span}>
-              <div className="h-full bg-card/50 border border-border/60 rounded-2xl p-8 md:p-10 group hover:border-primary/30 hover-glow gradient-border-hover transition-all duration-400 hover:-translate-y-1">
-                <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+              <div className="h-full bg-card border border-border rounded-2xl p-8 md:p-10 group hover:border-primary/40 hover-glow gradient-border-hover transition-all duration-400 hover:-translate-y-1 hover:shadow-lg">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-6 group-hover:from-primary/30 group-hover:to-primary/10 group-hover:scale-110 transition-all duration-300">
                   <service.icon className="h-5 w-5 text-primary" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-lg font-display text-foreground mb-3">
+                <h3 className="text-xl font-display text-foreground mb-3">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -49,9 +49,9 @@ const ServicesSection = () => {
 
         {/* Accent full-width card for Partner Marketing */}
         <ScrollReveal delay={0.2}>
-          <div className="border border-primary/20 rounded-2xl p-10 bg-primary/5 hover:bg-primary/10 hover-glow transition-all duration-300 gradient-border-hover">
+          <div className="border border-primary/25 rounded-2xl p-10 bg-gradient-to-r from-primary/8 via-primary/4 to-transparent hover:from-primary/12 hover:via-primary/6 hover-glow transition-all duration-300 gradient-border-hover">
             <div className="flex items-start gap-6">
-              <div className="w-11 h-11 rounded-2xl bg-primary/15 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/25 to-primary/10 flex items-center justify-center shrink-0">
                 <Handshake className="h-5 w-5 text-primary" strokeWidth={1.5} />
               </div>
               <div>

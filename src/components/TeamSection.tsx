@@ -24,28 +24,24 @@ const TeamSection = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
           {team.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 0.1}>
-              <div className="glass-card-dark p-8 rounded-2xl transition-all duration-400 hover:-translate-y-1 hover-glow gradient-border-hover group">
-                <div className="flex gap-5">
-                  <div className="shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-primary/25 to-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-primary text-sm font-semibold">
-                      {member.initials}
-                    </span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-display mb-1" style={{ color: "hsl(var(--dark-fg))" }}>
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-primary mb-3">
-                      {member.role}
-                    </p>
-                    <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--dark-muted))" }}>
-                      {member.description}
-                    </p>
-                  </div>
+              <div className="glass-card-dark p-8 rounded-2xl transition-all duration-400 hover:-translate-y-2 hover-glow gradient-border-hover group text-center">
+                <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-br from-primary/30 to-primary/10 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:shadow-[0_0_30px_hsl(var(--primary)/0.3)] transition-all duration-300 border border-primary/20">
+                  <span className="text-primary text-lg font-semibold">
+                    {member.initials}
+                  </span>
                 </div>
+                <h3 className="text-lg font-display mb-1" style={{ color: "hsl(var(--dark-fg))" }}>
+                  {member.name}
+                </h3>
+                <span className="inline-block text-xs text-primary bg-primary/10 px-3 py-1 rounded-full font-medium mb-4">
+                  {member.role}
+                </span>
+                <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--dark-muted))" }}>
+                  {member.description}
+                </p>
               </div>
             </ScrollReveal>
           ))}
