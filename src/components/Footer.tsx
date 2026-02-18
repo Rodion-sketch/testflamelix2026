@@ -7,18 +7,18 @@ const Footer = () => {
 
   return (
     <footer
-      className="py-16 px-6 md:px-12 lg:px-24 border-t"
-      style={{
-        backgroundColor: "hsl(var(--dark-bg))",
-        borderColor: "hsl(var(--dark-border))",
-      }}
+      className="relative py-16 px-6 md:px-12 lg:px-24"
+      style={{ backgroundColor: "hsl(var(--dark-bg))" }}
     >
+      {/* Gradient divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+
       <div className="container-narrow">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Col 1 — Logo + desc */}
           <div>
             <a href="#" className="flex items-center mb-4">
-              <img src={Logo} alt="Flamelix" className="h-8 w-auto" />
+              <img src={Logo} alt="Flamelix" className="h-9 w-auto" />
             </a>
             <p className="text-sm leading-relaxed mb-3" style={{ color: "hsl(var(--dark-muted))" }}>
               {t("footer.desc")}
@@ -30,7 +30,7 @@ const Footer = () => {
 
           {/* Col 2 — Nav */}
           <div>
-            <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "hsl(var(--dark-muted))" }}>
+            <p className="text-xs uppercase tracking-widest mb-4 font-medium" style={{ color: "hsl(var(--dark-muted))" }}>
               {t("nav.services") === "Услуги" ? "Навигация" : "Navigation"}
             </p>
             <nav className="flex flex-col gap-3">
@@ -49,7 +49,7 @@ const Footer = () => {
 
           {/* Col 3 — Social */}
           <div>
-            <p className="text-xs uppercase tracking-widest mb-4" style={{ color: "hsl(var(--dark-muted))" }}>
+            <p className="text-xs uppercase tracking-widest mb-4 font-medium" style={{ color: "hsl(var(--dark-muted))" }}>
               {t("nav.services") === "Услуги" ? "Соцсети" : "Social"}
             </p>
             <div className="flex gap-3">
@@ -57,7 +57,7 @@ const Footer = () => {
                 href="https://wa.me/79032317693"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                className="w-10 h-10 rounded-full border flex items-center justify-center hover:border-primary hover:text-primary hover:bg-primary/5 transition-all"
                 style={{ borderColor: "hsl(var(--dark-border))", color: "hsl(var(--dark-fg))" }}
                 aria-label="WhatsApp"
               >
@@ -67,7 +67,7 @@ const Footer = () => {
                 href="https://t.me/rodionbat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                className="w-10 h-10 rounded-full border flex items-center justify-center hover:border-primary hover:text-primary hover:bg-primary/5 transition-all"
                 style={{ borderColor: "hsl(var(--dark-border))", color: "hsl(var(--dark-fg))" }}
                 aria-label="Telegram"
               >
