@@ -37,14 +37,14 @@ const TestimonialsSection = () => {
                 </blockquote>
 
                 <div className="flex items-center gap-4 pt-8 border-t border-border/50">
-                  <div className="w-14 h-14 rounded-full overflow-hidden border border-primary/20">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20">
                     <img src={sarperPhoto} alt={t("testimonials.1.name")} className="w-full h-full object-cover object-top grayscale" />
                   </div>
                   <div>
                     <p className="font-display text-base text-foreground font-medium">
                       {t("testimonials.1.name")}
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground font-sans">
                       {t("testimonials.1.role")}
                     </p>
                   </div>
