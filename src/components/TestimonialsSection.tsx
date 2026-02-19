@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
 
                 <div className="flex items-center gap-4 pt-8 border-t border-border/50">
                   <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20">
-                    <img src={sarperPhoto} alt={t("testimonials.1.name")} className="w-[150%] h-[150%] object-cover grayscale" style={{ marginLeft: "-15%", marginTop: "-15%" }} />
+                    <img src={sarperPhoto} alt={t("testimonials.1.name")} className="w-[150%] h-[150%] object-cover grayscale" style={{ marginLeft: "-25%", marginTop: "-25%" }} />
                   </div>
                   <div>
                     <p className="font-display text-lg text-foreground font-medium">
